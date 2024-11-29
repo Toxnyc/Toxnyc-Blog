@@ -1,0 +1,394 @@
+body{
+    background-color: #00060D;
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    background-color: blueviolet;
+    width: 100%;
+    height: 5vh;
+    min-width: 100vh;
+}
+
+.all{
+    background-color: transparent;
+
+    display: grid;
+    grid-template-columns: 16% 65% 16%;
+
+    justify-content: space-between;
+
+
+    width: 100%;
+    height: 100%;
+
+    margin: 5vh 0 25vh 0;
+}
+
+.left{
+
+    /* background-color: pink; */
+
+    width: 100%;
+    height: 150vh;
+
+    margin: auto;
+}
+
+.center{
+    width: 100%;
+    height: 150vh;
+    background-color: aquamarine;
+    margin: auto;
+}
+
+.right{
+
+    /* background-color: pink; */
+
+    width: 100%;
+    height: 150vh;
+
+    margin: auto;
+}
+
+.last-update{
+    background-color: blue;
+    display: grid;
+    grid-template-rows: 10% 90%;
+    float: right;
+    
+    margin: auto;
+    margin-top: 5vh;
+    width: 90%;
+    height: 40vh;
+}
+
+.title-update{
+    background-color: burlywood;
+    display: flex;
+
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.list-update{
+    background-color:lawngreen ;
+    display: flexbox;
+
+    overflow-y: scroll;
+    
+    /*unicode-bidi: isolate; */
+    
+    margin: auto;
+    width: 90%;
+    height: 90%;
+}
+
+.list-update::-webkit-scrollbar{
+    width: 10px;
+    background-color: red;
+}
+
+.list-update::-webkit-scrollbar-button{
+    background-color:coral;
+    height: 0;
+}
+
+.list-update::-webkit-scrollbar-thumb{
+    background-color: violet;
+}
+
+.up-update{
+    background-color:royalblue ;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100% 40% 40%;
+
+    margin: 2% 0;
+    width: 100%;
+    height: 15%;
+}
+
+.icon-update{
+    background-color: aquamarine;
+
+    width: 100%;
+    height: 100%;
+}
+
+.data-update{
+    background-color: darkkhaki;
+
+    width: 100%;
+    height: 100%;
+}
+
+.outleft{
+    display:flex;
+    float: right;
+    margin: 22vh 0px 0px 0px;
+    padding: 4px;
+
+    border: 2px dashed #fff;
+    /* background-color: tomato; */
+    width: 85%;
+    height: 80vh;
+}
+
+.outright{
+    display: flex;
+    float: left;
+    margin: 20vh 0 0 0;
+
+    background-color:hotpink;
+    width: 90%;
+    height: 80vh; 
+}
+
+.chat{
+
+    margin: 0;
+
+    background-color:chartreuse;
+    width: 100%;
+    height: 20vh;
+}
+
+.top{
+    display: flexbox;
+    float:none;
+
+    background-color: red;
+    width: 100%;
+    height: 10%;
+}
+
+.bottom{
+    background-color:crimson;
+    display: grid;
+    grid-template-columns: 30% 70%;
+
+    margin: 2vh 0 0 0;
+    width: 100%;
+    height: 100%;
+}
+
+.footer{
+    display: flex;
+    float: none;
+
+    background-color:brown;
+    width: 100%;
+    height: 20%;
+
+    margin-bottom: 5vh;
+}
+
+.profile{
+    background-color: #011826;
+    border: dashed burlywood 4px;
+
+    display: flex;
+    float:left;
+
+    margin: auto;
+    width: 95%;
+    height: 98%;
+}
+
+.bio{
+    background-color: darkorange;
+    display: flex;
+    grid-column: 3;
+
+    margin: 0 auto;
+    margin-top: 10%;
+    width: 90%;
+    height: 140%;
+}
+
+.socialmedia{
+    background-color:aqua;
+
+    margin: 0 auto;
+    margin-top: 5%;
+    width: 90%;
+    height: 30vh;
+}
+
+.social-instagram{
+    background-color: pink;
+    display: flex;
+
+    width: 100%;
+    height:20%
+
+}
+
+.social-steam{
+    background-color:royalblue;
+    display: flex;
+
+    width: 100%;
+    height:20%
+
+}
+
+.social-github{
+    background-color:teal;
+    display: flex;
+
+    width: 100%;
+    height:20%
+
+}
+
+.social-spotify{
+    background-color:lawngreen;
+    display: flex;
+
+    width: 100%;
+    height:20%
+
+}
+
+.social-neocities{
+    background-color: yellow;
+    display: flex;
+
+    width: 100%;
+    height:20%
+
+}
+
+.backimg{
+    background-color: blue;
+    background-image: url(packages/photoback.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 30%;
+}
+
+.framephoto{
+    background-image: url(packages/gifphotoback.gif);
+    background-size: 110%;
+    background-position: center;
+
+    display: flex;
+    width: 25vh;
+    height: 25vh;
+    margin: auto;
+    margin-top: 60%;
+
+}
+
+.photo{
+    background-color:mediumslateblue; 
+
+    margin: auto;
+    width: 80%;
+    height: 80%;
+
+}
+
+.hall{
+    display: grid;
+    grid-template-rows: 5% 95%;
+    background-color:darkmagenta;
+
+    width: 100%;
+    height: 100%;
+}
+
+.corpo{
+    background-color:chocolate;
+    border: dashed #fff 4px;
+
+    display: flex;
+    float: right;
+
+    margin: auto;
+    width: 97%;
+    height: 98%;
+}
+
+.home{
+    border: none;
+}
+
+.buttons{
+    background-color:mediumseagreen;
+
+    display: flex;
+    float: right;
+
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.buttons button{
+    background-color:blueviolet;
+
+    border:none;
+
+    width: 19%;
+    height: 80%;
+}
+
+@media screen and (max-width: 960px){
+    .all{
+        display: grid;
+        grid-template-columns: 1fr 1fr; /*duas colunas iguais*/
+        grid-template-rows:auto auto ;
+    }
+
+    .footer{
+        display: none;
+    }
+
+    .last-update{
+        display: none;
+    }
+
+    .center{
+        grid-column: 1 / span 2; /*ocupando as duas colunas*/
+        justify-self: center;
+        width: 100%;
+    }
+
+    .left, .right{
+        display: block;
+        margin: 0;
+        width: 50%;
+        height: 80vh;
+        order: 2;
+    }
+
+    .left{
+        grid-column: 1;
+
+        width: 100%;
+
+    }
+
+    .right{
+        grid-column: 2;
+
+        width: 100%;
+
+    }
+
+    .outleft, .outright{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+}
