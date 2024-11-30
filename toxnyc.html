@@ -12,9 +12,65 @@
 
 
     <script>
-        function navigateToPage() {  // função navegar para página
-            document.querySelector('iframe[name="frame"]').src = "a/05.html"
-        } // no documento o query vai procurar por um "iframe" com nome "frame" e mudar sua propriedade src
+        document.addEventListener('DOMContentLoaded', function () {
+
+
+
+            const instagramButton = document.querySelector('.social-instagram');
+            const steamButton = document.querySelector('.social-steam');
+            const githubButton = document.querySelector('.social-github');
+            const spotifyButton = document.querySelector('.social-spotify');
+            const neocitiesButton = document.querySelector('.social-neocities');
+
+            if(instagramButton) 
+            {
+                instagramButton.addEventListener('click', function() {
+                    window.open('https://www.instagram.com/toxnyc/', '_blank');
+                });
+            }
+
+            if(steamButton) 
+            {
+                steamButton.addEventListener('click', function() {
+                    window.open('https://steamcommunity.com/profiles/76561198894007460/', '_blank');
+                });
+            }
+
+            if(githubButton)
+            {
+                githubButton.addEventListener('click', function() {
+                    window.open('https://github.com/toxnyc', '_blank');
+                });
+            }
+
+            if(spotifyButton)
+            {
+                spotifyButton.addEventListener('click', function() {
+                    window.open('https://open.spotify.com/user/314bjvsq3bqlvwdixy2lyhcjay2u', '_blank');
+                });
+            }
+
+            if(neocitiesButton)
+            {
+                neocitiesButton.addEventListener('click', function() {
+                    window.open('https://neocities.org/site/toxnyc', '_blank');
+                });
+            }
+
+
+            const buttons = document.querySelectorAll('.buttons button');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const iframe = document.querySelector('iframe[name="frame"]');
+                    const targetPage = button.dataset.src;
+                    if (iframe && targetPage) {
+                        iframe.src = targetPage;
+                    }
+                });
+            });
+
+        });
     </script>
 
 
@@ -103,26 +159,26 @@
                         <div class="bio"></div>
 
                         <div class="socialmedia">
-                            <div class="social-instagram" href="https://www.instagram.com/toxnyc">
-                                <a img=""></a>
-                                <p></p>
-                            </div>
-                            <div class="social-steam" href="https://www.instagram.com/">
-                                <a img=""></a>
-                                <p></p>
-                            </div>
-                            <div class="social-github" href="https://www.instagram.com/">
-                                <a img=""></a>
-                                <p></p>
-                            </div>
-                            <div class="social-spotify" href="https://www.instagram.com/">
-                                <a img=""></a>
-                                <p></p>
-                            </div>
-                            <div class="social-neocities" href="https://www.instagram.com/">
-                                <a img=""></a>
-                                <p></p>
-                            </div>
+                            <button class="social-instagram" id="sociallink">
+                                <a></a>
+                                <p>Instagram</p>
+                            </button>
+                            <button class="social-steam" id="sociallink">
+                                <a></a>
+                                <p>Steam</p>
+                            </button>
+                            <button class="social-github" id="sociallink">
+                                <a></a>
+                                <p>Github</p>
+                            </button>
+                            <button class="social-spotify" id="sociallink">
+                                <a></a>
+                                <p>Spotify</p>
+                            </button>
+                            <button class="social-neocities" id="sociallink">
+                                <a></a>
+                                <p>NeoCities</p>
+                            </button>
                         </div>
 
                     </div>
@@ -135,7 +191,7 @@
                         <button href="a/02.html"></button>
                         <button href="a/03.html"></button>
                         <button href="a/04.html"></button>
-                        <button onclick="navigateToPage()"></button> <!-- caso clicado navegar até pagina -->
+                        <button data-src="a/05.html"></button> <!-- caso clicado navegar até pagina -->
                     </div>
     
                     <div class="corpo">

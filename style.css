@@ -4,6 +4,11 @@ body{
     margin: 0;
 }
 
+@font-face{
+    font-family: 'GrapeSoda';
+    src: url(packages/fonts/GrapeSoda.ttf);
+}
+
 .header{
     background-color: blueviolet;
     width: 100%;
@@ -211,7 +216,6 @@ body{
 }
 
 .socialmedia{
-    background-color:aqua;
 
     margin: 0 auto;
     margin-top: 5%;
@@ -228,12 +232,131 @@ body{
 
 }
 
+#sociallink a{
+
+    background-size: cover;
+    image-rendering:pixelated;
+    display: flex;
+    border: none;
+
+    margin: auto 2vh;
+    width: 4.5vh;
+    height: 4.5vh;
+}
+
+.social-instagram{
+    background: linear-gradient(#fd5608 -5%, #b81b55 20%, #531ea3 60%);
+    border-radius: 1.5vh 1.5vh 0vh 0vh;
+    border: none;
+}
+
+.social-instagram:hover{
+    filter:brightness(1.5);
+    transition: 0.5s;
+}
+
+.social-instagram:active{
+    box-shadow: rgba(15, 15, 29, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.61) 0px 18px 36px -18px inset;
+}
+
+.social-instagram a{
+    background-image: url(packages/InstagramIcon.png);
+
+}
+
+.social-steam{
+    background: linear-gradient(#0B5B8E 0%, #06152D 60%);
+
+    border: none;
+}
+
+.social-steam:hover{
+    filter:brightness(1.5);
+    transition: 0.5s;
+}
+
+.social-steam:active{
+    box-shadow: rgba(15, 15, 29, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.61) 0px 18px 36px -18px inset;
+}
+
+.social-steam a{
+    background-image: url(packages/SteamIcon.png);
+}
+
+.social-github{
+    background: linear-gradient(#252527 0%, #06050f 60%);
+
+    border: none;
+}
+
+.social-github:hover{
+    filter:brightness(1.5);
+    transition: 0.5s;
+}
+
+.social-github:active{
+    box-shadow: rgba(15, 15, 29, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.61) 0px 18px 36px -18px inset;
+}
+
+.social-github a{
+    background-image: url(packages/GithubIcon.png);
+}
+
+.social-spotify{
+    background: linear-gradient(#00b941 0%, #004117 60%);
+
+    border: none;
+}
+
+.social-spotify:hover{
+    filter:brightness(1.5);
+    transition: 0.5s;
+}
+
+.social-spotify:active{
+    box-shadow: rgba(15, 15, 29, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.61) 0px 18px 36px -18px inset;
+}
+
+.social-spotify a{
+    background-image: url(packages/SpotifyIcon.png)
+}
+
+.social-neocities{
+    background: linear-gradient(#e09627 0%, #c24620 60%);
+    border-radius: 0vh 0vh 1.5vh 1.5vh;
+    border: none;
+}
+
+.social-neocities:hover{
+    filter:brightness(1.5);
+    transition: 0.5s;
+}
+
+.social-neocities:active{
+    box-shadow: rgba(15, 15, 29, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.61) 0px 18px 36px -18px inset;
+}
+
+.social-neocities a{
+    background-image: url(packages/NeocitiesIcon.png);
+}
+
+#sociallink p{
+    color: #ffffff;
+    display: flex;
+    margin: auto;
+
+    font-family: 'GrapeSoda';
+    font-size: 180%;
+}
+
+
 .social-steam{
     background-color:royalblue;
     display: flex;
 
     width: 100%;
     height:20%
+
 
 }
 
