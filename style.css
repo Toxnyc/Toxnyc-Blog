@@ -154,81 +154,81 @@ body{
     height: 128vh; 
 }
 
-.music-player{
-    background-color: #c24620;
+/**/
+
+.wrapper{
+    display: grid 5vh 20vh 4vh 5vh;
+    width: 30vh;
+    height: 40vh;
+    background-color:coral;
+
+  }
+  
+  .details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  }
+
+  .slider_containertop{
+    background-color: #9a1d86;
     display: grid;
-    grid-template-rows: 5vh 25vh 10vh ;
+    grid-template-columns: 5vh 35vh;
 
-    width: 100%;
-    height: 48vh;
-}
+    height: 5vh;
+    width: 30vh;
+  }
 
-.slider-volumecontainer{
-    display:flex;
-    background-color: red;
-    align-content: center;
-    padding-left: 1vh;
+  .slider_containertop input{
+    margin: auto 0;
+    width: 70%;
+    display: flex;
+    float: right;
+  }
 
-    height: 100%;
-}
+  .iconvolume{
+    display: flex;
 
-.slider-volumecontainer img {
-    background-color: darkgoldenrod;
-    margin: auto;
-    width: 2vh;
-    height: 2vh;
-}
+    margin: 1vh;
+    width: 3vh;
+    height: 3vh;
+    background-image: url(packages/audioicon.png);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  
+  .track-art {
 
-.trackcontainer{
-    display:grid;
-    background-color: indigo;
+  width: 20vh;
+  height: 20vh;
+  border:2px solid 	#FFFAFA;
+  background-size: cover;
+  background-position: center;
+  }
+  
 
-    width: 100%;
-    height: 30vh;
-}
+  
+  .track-name {
+    background-color: blueviolet;
+  font-size: 1rem;
+  }
+  
 
-.slider-volumecontainer input {
-    width: 80%;
-}
 
-.track-art{
-    background-color: #004117;
-
-    margin: 1vh auto;
-    width: 20vh;
-    height: 20vh;
-}
-
-.track-name{
-    background-color: #00b941;
-
-    height: 100%;
-    width: 100%;
-}
-
-.track-name{
-    text-align: center;
-}
-
-.slider_timercontainer {
-    background-color: fuchsia;
-    display:flex;
-    justify-content: center;
-    padding-top: 1vh;
-
-    height: 7vh;
-    width: 100%;
-}
-
-.track-buttons{
+  /**/
+  .buttons{
+    background-color: #e09627;
     display: flex;
     justify-content: space-around;
-    background-color: #e09627;
-    height: 100%;
+    width: 30vh;
+    height: 10vh;
+
 }
 
-.track-buttons div{
-    background-color:lightseagreen;
+.buttons div{
+    background-color: transparent;
+    margin: auto;
     width: 5vh;
     height: 5vh;
 }
@@ -241,12 +241,20 @@ body{
     height: 100%;
 }
 
-.playpause-track img{
+.pause{
     background-image: url(packages/pauseicon.png);
     background-size: cover;
     image-rendering: pixelated;
     width: 100%;
     height: 100%;
+}
+
+.play{
+  background-image: url(packages/playicon.png);
+  background-size: cover;
+  image-rendering: pixelated;
+  width: 100%;
+  height: 100%;
 }
 
 .next-track img{
@@ -256,6 +264,50 @@ body{
     width: 100%;
     height: 100%;
 }
+  /**/
+  
+  
+  .slider_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .seek_slider, .volume_slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: blue;
+
+  }
+  
+  .seek_slider::-webkit-slider-thumb,
+  .volume_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(packages/gifphotoback.gif);
+  background-size: cover;
+  image-rendering: pixelated;
+  width: 15px;
+  height: 15px;
+
+  cursor: grab;
+
+  }
+  
+  .seek_slider {
+  width: 60%;
+  }
+  
+  .volume_slider {
+  width: 80%;
+  }
+
+
+
+/**/
 
 
 
@@ -565,7 +617,7 @@ body{
     border: none;
 }
 
-.buttons{
+.buttonsiframe{
     background-color:mediumseagreen;
 
     display: flex;
@@ -578,7 +630,7 @@ body{
     height: 100%;
 }
 
-.buttons button{
+.buttonsiframe button{
     background-color:blueviolet;
 
     border:none;

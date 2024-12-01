@@ -122,7 +122,7 @@
 
                 <div class="hall">
 
-                    <div class="buttons">
+                    <div class="buttonsiframe">
                         <button href="a/01.html"></button>
                         <button href="a/02.html"></button>
                         <button href="a/03.html"></button>
@@ -149,44 +149,43 @@
             <div class="outright">
 
 
-                <div class="music-player">
+                <div class="player">
                     <div class="wrapper">
                         <div class="details">
-
-                            <div class="slider-volumecontainer">
-                                <img>
-                                <input type="range" min="1" max="100" value="99" class="volume_slider"
-                                    onchange="setVolume()">
+            
+                            <div class="slider_containertop">
+                                <div class="iconvolume"></div>
+                                <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
                             </div>
-
-                            <div class="trackcontainer">
-                                <div class="track-art"></div>
-                                <div class="track-name"> nome da track </div>
-                            </div>
-
+                            <div class="track-art"></div>
+                            <div class="track-name">Track Name</div>
+            
                         </div>
-
-                        <div class="slider_timercontainer">
+            
+                        <div class="slider_container">
                             <div class="current-time">00:00</div>
                             <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
                             <div class="total-duration">00:00</div>
                         </div>
-
-                        <div class="track-buttons">
+            
+            
+                        <div class="buttons">
+            
                             <div class="prev-track" onclick="prevTrack()">
-                                <img> 
-                             </div>
-                             <div class="playpause-track" onclick="playpauseTrack()">
-                                <img> 
-                             </div>
-                             <div class="next-track" onclick="nextTrack()">
-                                 <img> 
-                             </div>
-             
+                                <img>
+                            </div>
+                            <div class="playpause-track" onclick="playpauseTrack()">
+                                <img class="play">
+                            </div>
+                            <div class="next-track" onclick="nextTrack()">
+                                <img>
+                            </div>
+            
                         </div>
-
+            
                     </div>
                 </div>
+
 
 
                 <div class="music-list"></div>
@@ -196,7 +195,8 @@
 
     </section>
 
-    <script type="module" src="script.js">
+    <script src="script.js">
+        
     </script>
 
 </body>
