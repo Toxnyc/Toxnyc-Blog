@@ -10,70 +10,6 @@
 
 <body>
 
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-
-
-
-            const instagramButton = document.querySelector('.social-instagram');
-            const steamButton = document.querySelector('.social-steam');
-            const githubButton = document.querySelector('.social-github');
-            const spotifyButton = document.querySelector('.social-spotify');
-            const neocitiesButton = document.querySelector('.social-neocities');
-
-            if(instagramButton) 
-            {
-                instagramButton.addEventListener('click', function() {
-                    window.open('https://www.instagram.com/toxnyc/', '_blank');
-                });
-            }
-
-            if(steamButton) 
-            {
-                steamButton.addEventListener('click', function() {
-                    window.open('https://steamcommunity.com/profiles/76561198894007460/', '_blank');
-                });
-            }
-
-            if(githubButton)
-            {
-                githubButton.addEventListener('click', function() {
-                    window.open('https://github.com/toxnyc', '_blank');
-                });
-            }
-
-            if(spotifyButton)
-            {
-                spotifyButton.addEventListener('click', function() {
-                    window.open('https://open.spotify.com/user/314bjvsq3bqlvwdixy2lyhcjay2u', '_blank');
-                });
-            }
-
-            if(neocitiesButton)
-            {
-                neocitiesButton.addEventListener('click', function() {
-                    window.open('https://neocities.org/site/toxnyc', '_blank');
-                });
-            }
-
-
-            const buttons = document.querySelectorAll('.buttons button');
-
-            buttons.forEach(button => {
-                button.addEventListener('click', function () {
-                    const iframe = document.querySelector('iframe[name="frame"]');
-                    const targetPage = button.dataset.src;
-                    if (iframe && targetPage) {
-                        iframe.src = targetPage;
-                    }
-                });
-            });
-
-        });
-    </script>
-
-
     <header class="header">
         <marquee> Oi rs Oi rs Oi rs Oi rs Oi rs Oi rs Oi rs Oi rs Oi rs</marquee>
     </header>
@@ -87,54 +23,54 @@
                 <div class="title-update"></div>
                 <div class="list-update">
 
-                        <article class="up-update">
-                            <div class="icon-update"></div>
-                            <div class="data-update"></div>
-                        </article>
-                        <article class="up-update">
-                            <div class="icon-update"></div>
-                            <div class="data-update"></div>
-                        </article>
-                        <article class="up-update">
-                            <div class="icon-update"></div>
-                            <div class="data-update"></div>
-                        </article>
-                        <article class="up-update">
-                            <div class="icon-update"></div>
-                            <div class="data-update"></div>
-                        </article>
-                        <article class="up-update">
-                            <div class="icon-update"></div>
-                            <div class="data-update"></div>
-                        </article>
-                        <article class="up-update">
-                            <div class="icon-update"></div>
-                            <div class="data-update"></div>
-                        </article>
-                        <article class="up-update">
-                            <div class="icon-update"></div>
-                            <div class="data-update"></div>
-                        </article>
-                        <article class="up-update">
-                            <div class="icon-update"></div>
-                            <div class="data-update"></div>
-                        </article>
-                        <article class="up-update">
-                            <div class="icon-update"></div>
-                            <div class="data-update"></div>
-                        </article>
-                        <article class="up-update">
-                            <div class="icon-update"></div>
-                            <div class="data-update"></div>
-                        </article>
-                        <article class="up-update">
-                            <div class="icon-update"></div>
-                            <div class="data-update"></div>
-                        </article>
-                        <article class="up-update">
-                            <div class="icon-update"></div>
-                            <div class="data-update"></div>
-                        </article>
+                    <article class="up-update">
+                        <div class="icon-update"></div>
+                        <div class="data-update"></div>
+                    </article>
+                    <article class="up-update">
+                        <div class="icon-update"></div>
+                        <div class="data-update"></div>
+                    </article>
+                    <article class="up-update">
+                        <div class="icon-update"></div>
+                        <div class="data-update"></div>
+                    </article>
+                    <article class="up-update">
+                        <div class="icon-update"></div>
+                        <div class="data-update"></div>
+                    </article>
+                    <article class="up-update">
+                        <div class="icon-update"></div>
+                        <div class="data-update"></div>
+                    </article>
+                    <article class="up-update">
+                        <div class="icon-update"></div>
+                        <div class="data-update"></div>
+                    </article>
+                    <article class="up-update">
+                        <div class="icon-update"></div>
+                        <div class="data-update"></div>
+                    </article>
+                    <article class="up-update">
+                        <div class="icon-update"></div>
+                        <div class="data-update"></div>
+                    </article>
+                    <article class="up-update">
+                        <div class="icon-update"></div>
+                        <div class="data-update"></div>
+                    </article>
+                    <article class="up-update">
+                        <div class="icon-update"></div>
+                        <div class="data-update"></div>
+                    </article>
+                    <article class="up-update">
+                        <div class="icon-update"></div>
+                        <div class="data-update"></div>
+                    </article>
+                    <article class="up-update">
+                        <div class="icon-update"></div>
+                        <div class="data-update"></div>
+                    </article>
 
                 </div>
             </div>
@@ -193,10 +129,10 @@
                         <button href="a/04.html"></button>
                         <button data-src="a/05.html"></button> <!-- caso clicado navegar até pagina -->
                     </div>
-    
+
                     <div class="corpo">
                         <iframe class="home" name="frame" src="a/home" height="100%" width="100%" scrolling="yes">
-    
+
                         </iframe>
                     </div>
 
@@ -210,13 +146,58 @@
         </section>
 
         <div class="right">
-            <div class="outright"></div>
+            <div class="outright">
 
-            <div class="cha"></div>
+
+                <div class="music-player">
+                    <div class="wrapper">
+                        <div class="details">
+
+                            <div class="slider-volumecontainer">
+                                <img>
+                                <input type="range" min="1" max="100" value="99" class="volume_slider"
+                                    onchange="setVolume()">
+                            </div>
+
+                            <div class="trackcontainer">
+                                <div class="track-art"></div>
+                                <div class="track-name"> nome da track </div>
+                            </div>
+
+                        </div>
+
+                        <div class="slider_timercontainer">
+                            <div class="current-time">00:00</div>
+                            <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                            <div class="total-duration">00:00</div>
+                        </div>
+
+                        <div class="track-buttons">
+                            <div class="prev-track" onclick="prevTrack()">
+                                <img> 
+                             </div>
+                             <div class="playpause-track" onclick="playpauseTrack()">
+                                <img> 
+                             </div>
+                             <div class="next-track" onclick="nextTrack()">
+                                 <img> 
+                             </div>
+             
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="music-list"></div>
+                <div class="music-roll"></div>
+            </div>
         </div>
 
     </section>
 
+    <script type="module" src="script.js">
+    </script>
 
 </body>
 
