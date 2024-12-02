@@ -36,15 +36,17 @@ body{
     justify-content: space-between;
 
 
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
 
-    margin: 5vh 0 25vh 0;
+    margin: 5vh auto;
 }
 
 .left{
 
     /* background-color: pink; */
+    justify-content: center;
+    align-items: center;
 
     width: 100%;
     height: 150vh;
@@ -78,8 +80,8 @@ body{
 
     border: 2px dashed #fff;
     
-    margin: auto;
-    margin-top: 5vh;
+    margin: 5vh auto;
+
     width: 90%;
     height: 40vh;
 }
@@ -145,10 +147,24 @@ body{
     height: 100%;
 }
 
+.gif01{
+    background-image: url(packages/gifs/gif01.gif);
+    background-size: cover;
+    image-rendering: pixelated;
+
+    margin: 0 auto;
+    display: flex;
+
+    
+    width: 20vh;
+    height: 20vh;
+}
+
 .outleft{
-    display:flex;
+    display:grid;
+    grid-row: 30% 20% 50%;
+    margin: 4vh 0;
     float: right;
-    margin: 22vh 0px 0px 0px;
     padding: 4px;
 
     border: 2px dashed #fff;
@@ -161,10 +177,9 @@ body{
     display: flexbox;
     float: left;
     margin: 15vh 0 0 0;
-    gap: 30vh 0;
 
     background-color:hotpink;
-    width: 90%;
+    width: 30vh;
     height: 128vh; 
 }
 
@@ -369,6 +384,21 @@ body{
     height: 100%;
 }
 
+.visdiv02{
+    /*background-color:fuchsia;*/
+    background-image: url(packages/visdiv02.png);
+    background-repeat:repeat-x;
+    background-size:contain;
+
+    display: flex;
+    float: none;
+
+    width: 100%;
+    height: 4vh;
+
+    margin-top: 2vh;
+}
+
 .footer{
     background-color:#000;
     display: flex;
@@ -382,14 +412,14 @@ body{
 
 .profile{
     /*background-color: #011826;*/
-    border: dashed burlywood 4px;
+    border: dashed #fff 2px;
 
     display: flex;
     float:left;
 
     margin: auto;
     width: 95%;
-    height: 98%;
+    height: 100%;
 }
 
 .bio{
@@ -428,8 +458,8 @@ body{
     border: none;
 
     margin: auto 2vh;
-    width: 4.5vh;
-    height: 4.5vh;
+    width: 4vh;
+    height: 4vh;
 }
 
 .social-instagram{
@@ -618,19 +648,43 @@ body{
 }
 
 .corpo{
-    background-color:chocolate;
-    border: dashed #fff 4px;
+    /*background-color:chocolate;*/
+    border: dashed #fff 2px;
+    
+    display: grid;
+    grid-template-rows: 70% 2vh 30%;
 
-    display: flex;
     float: right;
+    
+    padding: 1vh;
 
-    margin: auto;
-    width: 97%;
-    height: 98%;
+    margin: 0 auto;
+    width: 95%;
+    height: 99%;
 }
 
 .home{
+    background-color: chartreuse;
     border: none;
+
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.visdiv01{
+    background-image: url(packages/gifs/visdiv01.gif);
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 100%;
+}
+
+.subhome{
+    background-color: midnightblue;
+
+    margin: auto;
+    width: 100%;
+    height: 90%;
 }
 
 .buttonsiframe{
@@ -647,7 +701,7 @@ body{
 }
 
 .buttonsiframe button{
-    background-color:blueviolet;
+    /*background-color:blueviolet;*/
 
     border:none;
 
