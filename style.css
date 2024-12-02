@@ -1,5 +1,11 @@
 body{
-    background-color: #00060D;
+    background-color: #000000;
+    background-image: url(packages/background.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+
+
     padding: 0;
     margin: 0;
 }
@@ -7,6 +13,11 @@ body{
 @font-face{
     font-family: 'GrapeSoda';
     src: url(packages/fonts/GrapeSoda.ttf);
+}
+
+@font-face {
+    font-family: 'OwreKynge';
+    src: url(packages/fonts/OwreKynge.ttf);
 }
 
 .header{
@@ -42,9 +53,10 @@ body{
 }
 
 .center{
+    background-color: #000000af;
+
     width: 100%;
     height: 150vh;
-    background-color: aquamarine;
     margin: auto;
 }
 
@@ -59,10 +71,12 @@ body{
 }
 
 .last-update{
-    background-color: blue;
+    /*background-color: blue;*/
     display: grid;
     grid-template-rows: 10% 90%;
     float: right;
+
+    border: 2px dashed #fff;
     
     margin: auto;
     margin-top: 5vh;
@@ -346,7 +360,7 @@ body{
 }
 
 .bottom{
-    background-color:crimson;
+    /*background-color:crimson;*/
     display: grid;
     grid-template-columns: 30% 70%;
 
@@ -356,10 +370,10 @@ body{
 }
 
 .footer{
+    background-color:#000;
     display: flex;
     float: none;
 
-    background-color:brown;
     width: 100%;
     height: 20%;
 
@@ -367,7 +381,7 @@ body{
 }
 
 .profile{
-    background-color: #011826;
+    /*background-color: #011826;*/
     border: dashed burlywood 4px;
 
     display: flex;
@@ -419,9 +433,9 @@ body{
 }
 
 .social-instagram{
-    background: linear-gradient(#fd5608 -5%, #b81b55 20%, #531ea3 60%);
-    border-radius: 1.5vh 1.5vh 0vh 0vh;
-    border: none;
+    background: linear-gradient(180deg, rgb(255, 43, 15) 0%, rgb(255, 23, 92) 45%, rgb(138, 0, 119) 47%, rgb(133, 0, 138) 60%, rgb(84, 0, 153) 100%);
+
+    border: dashed 2px rgb(255, 255, 255);
 }
 
 .social-instagram:hover{
@@ -439,9 +453,9 @@ body{
 }
 
 .social-steam{
-    background: linear-gradient(#0B5B8E 0%, #06152D 60%);
+    background: linear-gradient(180deg, #0B5B8E 0%, #002b6b 45%, rgb(14, 23, 44) 47%, #06152D 60%, rgb(0, 10, 43) 100%);
 
-    border: none;
+    border: dashed 2px rgb(255, 255, 255);
 }
 
 .social-steam:hover{
@@ -458,9 +472,9 @@ body{
 }
 
 .social-github{
-    background: linear-gradient(#252527 0%, #06050f 60%);
+    background: linear-gradient(180deg, #1a1f22 0%, #0b1016 45%, rgb(0, 0, 0) 47%, #080a0c 60%, rgb(0, 1, 3) 100%);
 
-    border: none;
+    border: dashed 2px rgb(255, 255, 255);
 }
 
 .social-github:hover{
@@ -477,9 +491,9 @@ body{
 }
 
 .social-spotify{
-    background: linear-gradient(#00b941 0%, #004117 60%);
+    background: linear-gradient(180deg, #00b941 0%, #006b3e 45%, rgb(6, 56, 29) 47%, #004117 60%, rgb(0, 43, 27) 100%);
 
-    border: none;
+    border: dashed 2px rgb(255, 255, 255);
 }
 
 .social-spotify:hover{
@@ -496,9 +510,9 @@ body{
 }
 
 .social-neocities{
-    background: linear-gradient(#e09627 0%, #c24620 60%);
-    border-radius: 0vh 0vh 1.5vh 1.5vh;
-    border: none;
+    background: linear-gradient(180deg, #c98b2e 0%, #ce551e 45%, rgb(189, 43, 38) 47%, #d42525 60%, rgb(216, 35, 22) 100%);
+
+    border: dashed 2px rgb(255, 255, 255);
 }
 
 .social-neocities:hover{
@@ -566,6 +580,8 @@ body{
     background-image: url(packages/photoback.jpeg);
     background-size: cover;
     background-position: center;
+
+    margin: 1vh;
     width: 100%;
     height: 30%;
 }
@@ -593,9 +609,9 @@ body{
 }
 
 .hall{
+    /*background-color:darkmagenta;*/
     display: grid;
     grid-template-rows: 5% 95%;
-    background-color:darkmagenta;
 
     width: 100%;
     height: 100%;
@@ -618,7 +634,7 @@ body{
 }
 
 .buttonsiframe{
-    background-color:mediumseagreen;
+    /*background-color:mediumseagreen;*/
 
     display: flex;
     float: right;
@@ -635,9 +651,20 @@ body{
 
     border:none;
 
+    border-radius: 4px;
+    background: linear-gradient(180deg, rgb(17, 17, 17) 0%, rgb(65, 65, 65) 45%, rgb(46, 46, 46) 47%, rgb(0, 0, 0) 100%);
+    padding-left: 5px;
+    border: solid 2px gray;
+    filter: drop-shadow(0 0.5px 0 gray) drop-shadow(0 0.5px 0 gray) drop-shadow(0 0.5px 0.5px gray) drop-shadow(0.5px 0.5px 1px gray) drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0 black);
+
     width: 19%;
     height: 80%;
+
+    color: #fff;
+    font-family: 'OwreKynge';
+    font-size: 3vh;
 }
+
 
 @media screen and (max-width: 960px){
     .all{
