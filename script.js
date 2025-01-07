@@ -81,14 +81,14 @@ function playpauseTrack() {
 function playTrack() {
     curr_track.play();
     isPlaying = true;
-    playpause_btn.innerHTML = '<img class="pause"></img>';
+    playpause_btn.innerHTML = '<div class="pause"></div>';
 }
 
 // Pausa a reprodução
 function pauseTrack() {
     curr_track.pause();
     isPlaying = false;
-    playpause_btn.innerHTML = '<img class="play"></img>';
+    playpause_btn.innerHTML = '<div class="play"></div>';
 }
 
 // Avança para a próxima música
@@ -139,6 +139,12 @@ function seekTo() {
 }
 
 
+
+//                                   BOTÕES
+
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
 
     const instagramButton = document.querySelector('.social-instagram');
@@ -184,6 +190,7 @@ document.addEventListener('DOMContentLoaded', function () {
     buttons.forEach(button => {
         button.addEventListener('click', function () {
             const iframe = document.querySelector('iframe[name="frame"]');
+            
             const targetPage = button.dataset.src;
             if (iframe && targetPage) {
                 iframe.src = targetPage;

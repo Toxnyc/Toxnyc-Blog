@@ -1,3 +1,9 @@
+/*                       VÁLIDO PARA TODO DOCUMENTO                      */
+*{
+
+    cursor: url(packages/gifs/cursor1.gif), auto;
+}
+
 body{
     background-color: #000000;
     background-image: url(packages/background.jpeg);
@@ -19,6 +25,24 @@ body{
     font-family: 'OwreKynge';
     src: url(packages/fonts/OwreKynge.ttf);
 }
+
+@font-face {
+    font-family: 'DigitalDisco';
+    src: url(packages/fonts/DigitalDisco.ttf);
+}
+
+@font-face {
+    font-family: 'DigitalDiscoThin';
+    src: url(packages/fonts/DigitalDisco-Thin.ttf);
+}
+
+@font-face {
+    font-family: 'HeinzHeinrich';
+    src: url(packages/fonts/HeinzHeinrich-Regular.otf);
+}
+
+/*                       DIVISÕES PRINCIPAIS                      */
+
 
 .header{
     background-color: blueviolet;
@@ -72,31 +96,42 @@ body{
     margin: auto;
 }
 
+/*                        COMPONENTES DO ESQUERDA                          */
+
 .last-update{
     /*background-color: blue;*/
+    background-color:rgba(14, 14, 14, 0.63) ;
     display: grid;
     grid-template-rows: 10% 90%;
     float: right;
+    
+    border: 1px dashed #fff;
 
-    border: 2px dashed #fff;
+    color: #fff;
     
     margin: 5vh auto;
-
     width: 90%;
     height: 40vh;
 }
 
 .title-update{
-    background-color: burlywood;
+    /*background-color: burlywood;*/
     display: flex;
+
+    padding: 1vh;
+    
+    font-family: 'DigitalDiscoThin';
+    font-size: 4vh;
 
     margin: auto;
     width: 100%;
     height: 100%;
 }
 
+
 .list-update{
-    background-color:lawngreen ;
+
+    /*background-color:lawngreen ;*/
     display: flexbox;
 
     overflow-y: scroll;
@@ -110,44 +145,55 @@ body{
 
 .list-update::-webkit-scrollbar{
     width: 10px;
-    background-color: red;
+    background-color: rgba(151, 151, 151, 0.397);
 }
 
 .list-update::-webkit-scrollbar-button{
-    background-color:coral;
-    height: 0;
+    /*background-color:coral;*/
+    height: 0%;
 }
 
 .list-update::-webkit-scrollbar-thumb{
-    background-color: violet;
+    background-color: rgba(22, 22, 22, 0.603);
 }
 
 .up-update{
-    background-color:royalblue ;
     display: grid;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: 100% 40% 40%;
+    grid-template-columns: 30% 70%;
+ 
 
-    margin: 2% 0;
+    margin: 4% 0;
     width: 100%;
     height: 15%;
 }
 
 .icon-update{
-    background-color: aquamarine;
+    /*background-color: aquamarine;*/
+    background-size: cover;
+    background-position: center;
+    image-rendering: pixelated;
 
-    width: 100%;
-    height: 100%;
+    width: 5vh;
+    height: 5vh;
+}
+
+#updateIMG01{
+    background-image: url(packages/oldicon01.png);
 }
 
 .data-update{
-    background-color: darkkhaki;
+    /*background-color: darkkhaki;*/
+
+    font-size: 2vh;
+    font-family: 'DigitalDiscoThin';
+
 
     width: 100%;
     height: 100%;
 }
 
 .gif01{
+    background-color: #fff;
     background-image: url(packages/gifs/gif01.gif);
     background-size: cover;
     image-rendering: pixelated;
@@ -167,30 +213,45 @@ body{
     float: right;
     padding: 4px;
 
-    border: 2px dashed #fff;
+    border: 1.5px dashed #fff;
     /* background-color: tomato; */
     width: 85%;
     height: 80vh;
 }
 
+.chat{
+
+    margin: 0;
+
+    background-color:violet;
+    width: 100%;
+    height: 20vh;
+}
+
+
+/*                       COMPONENTES DO RIGHT                      */
+
+
 .outright{
+    /*background-color:hotpink;*/
     display: flexbox;
     float: left;
     margin: 15vh 0 0 0;
 
-    background-color:hotpink;
     width: 30vh;
     height: 128vh; 
 }
 
-/**/
+/*                       PLAYER DISPLAY                      */
 
 .wrapper{
     display: grid 5vh 20vh 4vh 5vh;
     width: 30vh;
     height: 40vh;
-    background-color:coral;
 
+    border: dashed 1.5px #fff;
+
+    color: #fff;
   }
   
   .details {
@@ -201,7 +262,7 @@ body{
   }
 
   .slider_containertop{
-    background-color: #9a1d86;
+    /*background-color: #9a1d86;*/
     display: grid;
     grid-template-columns: 5vh 35vh;
 
@@ -222,6 +283,7 @@ body{
     margin: 1vh;
     width: 3vh;
     height: 3vh;
+
     background-image: url(packages/audioicon.png);
     background-size: cover;
     image-rendering: pixelated;
@@ -239,17 +301,15 @@ body{
 
   
   .track-name {
-    background-color: blueviolet;
-  font-size: 1rem;
+    /*background-color: blueviolet;*/
+    font-size: 1rem;
   }
   
-
-
-  /**/
   .buttons{
-    background-color: #e09627;
+    /*background-color: #e09627;*/
     display: flex;
     justify-content: space-around;
+
     width: 30vh;
     height: 10vh;
 
@@ -262,7 +322,7 @@ body{
     height: 5vh;
 }
 
-.prev-track img{
+.prev-track div{
     background-image: url(packages/previcon.png);
     background-size: cover;
     image-rendering: pixelated;
@@ -274,6 +334,7 @@ body{
     background-image: url(packages/pauseicon.png);
     background-size: cover;
     image-rendering: pixelated;
+
     width: 100%;
     height: 100%;
 }
@@ -286,57 +347,54 @@ body{
   height: 100%;
 }
 
-.next-track img{
+.next-track div{
     background-image: url(packages/nexticon.png);
     background-size: cover;
     image-rendering: pixelated;
     width: 100%;
     height: 100%;
+}  
+  
+.slider_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-  /**/
   
+.seek_slider, .volume_slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: rgb(81, 81, 102);
+}
   
-  .slider_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  }
-  
-  .seek_slider, .volume_slider {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  height: 5px;
-  background: blue;
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(packages/gifs/core.gif);
+    background-size: cover;
+    image-rendering: pixelated;
+    width: 20px;
+    height: 20px;
 
-  }
-  
-  .seek_slider::-webkit-slider-thumb,
-  .volume_slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-image: url(packages/gifphotoback.gif);
-  background-size: cover;
-  image-rendering: pixelated;
-  width: 15px;
-  height: 15px;
+    cursor: grab;
 
-  cursor: grab;
-
-  }
+}
   
-  .seek_slider {
-  width: 60%;
-  }
+.seek_slider {
+    width: 60%;
+}
   
-  .volume_slider {
-  width: 80%;
-  }
+.volume_slider {
+    width: 90%;
+}
 
 
 
-/**/
+/*                       LISTA DAS MÚSICAS                      */
 
 
 
@@ -356,22 +414,20 @@ body{
     height: 35vh;
 }
 
-.chat{
-
-    margin: 0;
-
-    background-color:chartreuse;
-    width: 100%;
-    height: 20vh;
-}
+/*                            COMPONENTES CENTRAIS                           */
 
 .top{
+    background-color: red;
+    background: url(packages/bannertox.png);
+    background-size: cover;
+    image-rendering: pixelated;
+
     display: flexbox;
     float:none;
+    margin: auto;
 
-    background-color: red;
-    width: 100%;
-    height: 10%;
+    width: 120vh;
+    height: 28vh;
 }
 
 .bottom{
@@ -389,6 +445,7 @@ body{
     background-image: url(packages/visdiv02.png);
     background-repeat:repeat-x;
     background-size:contain;
+    BACKGROUND-POSITION: CENTER;
 
     display: flex;
     float: none;
@@ -412,7 +469,7 @@ body{
 
 .profile{
     /*background-color: #011826;*/
-    border: dashed #fff 2px;
+    border: dashed #fff 1.5px;
 
     display: flex;
     float:left;
@@ -422,21 +479,77 @@ body{
     height: 100%;
 }
 
+
 .bio{
-    background-color: darkorange;
+    /*background-color: darkorange;*/
     display: flex;
     grid-column: 3;
 
+    padding: 1vh;
     margin: 0 auto;
     margin-top: 10%;
+
     width: 90%;
-    height: 140%;
+    height: 35%;
+
+    font-family: 'DigitalDiscoThin';
+    text-align: center;
+    color: #fff;
+}
+
+.bioimages{
+    /*background-color: orange;*/
+    
+    width: 100%;
+    height: 110%;
+}
+
+.bioimages div {
+    background-size: cover;
+    image-rendering: pixelated;
+    margin: 0.5vh 0;
+    width: 100%;
+    height: 4.1vh;
+}
+
+.bimg1{
+    background-image: url(packages/gifs/IMG_7386.gif);
+}
+.bimg2{
+    background-image: url(packages/gifs/blinky8.gif);
+}
+.bimg3{
+    background-image: url(packages/gifs/032.gif);
+}
+.bimg4{
+    background-image: url(packages/gifs/d4041c92_original.gif);
+}
+.bimg5{
+    background-image: url(packages/gifs/depression.gif);
+}
+.bimg6{
+    background-image: url(packages/gifs/emomusicfan.gif);
+}
+.bimg7{
+    background-image: url(packages/gifs/innocent.gif);
+}
+.bimg8{
+    background-image: url(packages/gifs/QyRdafW.gif);
+}
+.bimg9{
+    background-image: url(packages/gifs/sinnerBLINK.gif);
+}
+.bimg10{
+    background-image: url(packages/gifs/urteeth.gif);
+}
+.bimg11{
+    background-image: url(packages/gifs/WVOARo0.gif);
 }
 
 .socialmedia{
-
+    background-color: darkred;
     margin: 0 auto;
-    margin-top: 5%;
+    margin-top: 10%;
     width: 90%;
     height: 30vh;
 }
@@ -465,7 +578,7 @@ body{
 .social-instagram{
     background: linear-gradient(180deg, rgb(255, 43, 15) 0%, rgb(255, 23, 92) 45%, rgb(138, 0, 119) 47%, rgb(133, 0, 138) 60%, rgb(84, 0, 153) 100%);
 
-    border: dashed 2px rgb(255, 255, 255);
+    border: dashed 1.5px rgb(255, 255, 255);
 }
 
 .social-instagram:hover{
@@ -485,7 +598,7 @@ body{
 .social-steam{
     background: linear-gradient(180deg, #0B5B8E 0%, #002b6b 45%, rgb(14, 23, 44) 47%, #06152D 60%, rgb(0, 10, 43) 100%);
 
-    border: dashed 2px rgb(255, 255, 255);
+    border: dashed 1.5px rgb(255, 255, 255);
 }
 
 .social-steam:hover{
@@ -504,7 +617,7 @@ body{
 .social-github{
     background: linear-gradient(180deg, #1a1f22 0%, #0b1016 45%, rgb(0, 0, 0) 47%, #080a0c 60%, rgb(0, 1, 3) 100%);
 
-    border: dashed 2px rgb(255, 255, 255);
+    border: dashed 1.5px rgb(255, 255, 255);
 }
 
 .social-github:hover{
@@ -523,7 +636,7 @@ body{
 .social-spotify{
     background: linear-gradient(180deg, #00b941 0%, #006b3e 45%, rgb(6, 56, 29) 47%, #004117 60%, rgb(0, 43, 27) 100%);
 
-    border: dashed 2px rgb(255, 255, 255);
+    border: dashed 1.5px rgb(255, 255, 255);
 }
 
 .social-spotify:hover{
@@ -542,7 +655,7 @@ body{
 .social-neocities{
     background: linear-gradient(180deg, #c98b2e 0%, #ce551e 45%, rgb(189, 43, 38) 47%, #d42525 60%, rgb(216, 35, 22) 100%);
 
-    border: dashed 2px rgb(255, 255, 255);
+    border: dashed 1.5px rgb(255, 255, 255);
 }
 
 .social-neocities:hover{
@@ -569,7 +682,7 @@ body{
 
 
 .social-steam{
-    background-color:royalblue;
+    /*background-color:royalblue;*/
     display: flex;
 
     width: 100%;
@@ -579,7 +692,7 @@ body{
 }
 
 .social-github{
-    background-color:teal;
+    /*background-color:teal;*/
     display: flex;
 
     width: 100%;
@@ -588,7 +701,7 @@ body{
 }
 
 .social-spotify{
-    background-color:lawngreen;
+    /*background-color:lawngreen;*/
     display: flex;
 
     width: 100%;
@@ -597,7 +710,7 @@ body{
 }
 
 .social-neocities{
-    background-color: yellow;
+    /*background-color: yellow;*/
     display: flex;
 
     width: 100%;
@@ -606,8 +719,8 @@ body{
 }
 
 .backimg{
-    background-color: blue;
-    background-image: url(packages/photoback.jpeg);
+    /*background-color: blue;*/
+    background-image: url(packages/photoback01.jpg);
     background-size: cover;
     background-position: center;
 
@@ -618,12 +731,12 @@ body{
 
 .framephoto{
     background-image: url(packages/gifphotoback.gif);
-    background-size: 110%;
+    background-size: cover;
     background-position: center;
 
     display: flex;
-    width: 25vh;
-    height: 25vh;
+    width: 24vh;
+    height: 24vh;
     margin: auto;
     margin-top: 60%;
 
@@ -633,9 +746,18 @@ body{
     background-color:mediumslateblue; 
 
     margin: auto;
-    width: 80%;
-    height: 80%;
+    width: 20vh;
+    height: 20vh;
 
+}
+
+.photoframe{
+    background-image: url(packages/photoframe.png);
+    background-size: 120%;
+    background-position: center;
+
+    width: 100%;
+    height: 100%;
 }
 
 .hall{
@@ -649,10 +771,10 @@ body{
 
 .corpo{
     /*background-color:chocolate;*/
-    border: dashed #fff 2px;
+    border: dashed #fff 1.5px;
     
     display: grid;
-    grid-template-rows: 70% 2vh 30%;
+    grid-template-rows: 5vh 60% 2vh 30%;
 
     float: right;
     
@@ -663,13 +785,32 @@ body{
     height: 99%;
 }
 
+.homedesc{
+    background-color: black;
+    margin-bottom: 5vh;
+    width: 100%;
+    height: 100%;
+}
+
+.homedesc p {
+    font-family: 'HeinzHeinrich';
+    font-size: 2vh;
+    color: white;
+    margin: -2vh 1vh;
+}
+
 .home{
-    background-color: chartreuse;
+    /*background-color: chartreuse;*/
     border: none;
+
 
     margin: 0 auto;
     width: 100%;
     height: 100%;
+}
+
+.home::-webkit-scrollbar{
+
 }
 
 .visdiv01{
@@ -718,6 +859,13 @@ body{
     font-family: 'OwreKynge';
     font-size: 3vh;
 }
+
+iframe{
+
+}
+
+
+/*                              AJUSTANDO TELA PARA CELULARES                          */
 
 
 @media screen and (max-width: 960px){

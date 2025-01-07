@@ -1,0 +1,151 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: 'Pixel';
+    src: url(../packages/fonts/MinecraftStandard.otf);
+}
+
+@font-face {
+    font-family: 'JBlack';
+    src: url(../packages/fonts/JBLACK.TTF);
+}
+
+body::-webkit-scrollbar{
+    background-color: blueviolet;
+    width: 1.5vh;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: blue;
+}
+
+.about-content{
+    background-color: black;
+    border-radius: 2vh 2vh 0 0;
+
+    width: 100%;
+    height: 150vh;
+
+}
+
+.about-about{
+
+
+    display: flex;
+    margin: 5vh 0;
+
+    width: 100%;
+    height: 10vh;
+
+
+    border: 2px solid #1B44B8;
+    background: linear-gradient(to bottom, #245edb 0%, #3f8cf3 9%, #245edb 18%, #245edb 92%, #004da5 100%) center / cover no-repeat;
+
+    text-shadow: 2px 2px 0px #0004d4;
+    border-radius: 2vh 2vh 0 0;
+    color: #FFF;
+}
+
+.about-ABimg1 {
+    display: flex;
+    width: 10vh;
+    height: 10vh;
+    background-image: url(../packages/gifs/sonichu1.gif);
+    background-size: cover;
+    image-rendering: pixelated;
+}
+
+.toxnyc {
+    font-family: 'JBlack';
+    color: white;
+    display: flex;
+    margin: auto;
+    font-size: 8vh;
+
+}
+.about-ABimg2 {
+    display: flex;
+    width: 25vh;
+    height: 10vh;
+    background-image: url(../packages/gifs/catstretch.gif);
+    background-size: cover;
+    image-rendering: pixelated;
+}
+
+.aboutme-text p{
+    color:white;
+    margin: 2vh;
+    font-family: 'Pixel';
+    font-stretch:ultra-expanded;
+    font-size: 8px;
+}
+
+.divang {
+    background-color: transparent;
+    background-image: url(../packages/divang.png);
+    background-size: 50vh;
+    background-position: center;
+    image-rendering: pixelated;
+    width: 100%;
+    height: 25vh;
+}
+
+.movie-desc {
+
+    font-family: 'JBlack';
+    font-size: 8vh;
+    color: white;
+}
+
+.movie-galery{
+    width: 100%;
+    height: 230px;
+    margin: 5vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    
+}
+
+.movie{
+    height: 150px;
+    margin-left: 10vh;
+    padding: 100vh;
+    animation: spin 1.88s linear infinite;
+    perspective: 500px;
+    transition: width 0.5s;
+    position: absolute;
+}
+
+.movie img {
+    transition: transform 0.5s, width 0.5s, height 0.5s, margin-top 0.5s;
+    width: 180px;
+    height: 50vh;
+    transform: rotate(0deg) rotateY(25deg);
+    transform-style: preserve-3d;
+    /*object-fit: cover;*/
+}
+ 
+  .movie-galery .movie {
+    all:unset;
+    perspective: 600px ;
+    width: 10vh;
+    transition: width 0.5s;
+  }
+ 
+  .movie-galery .movie:hover {
+    width: 80vh;
+  }
+
+ 
+  .movie-galery .movie:hover img {
+    transform: rotateX(0deg) rotateY(10deg);
+    margin-top: -2px;
+  }
+ 

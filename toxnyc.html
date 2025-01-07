@@ -13,7 +13,8 @@
     <div class="background"></div>
 
     <header class="header">
-        <marquee> Oi rs Oi rs Oi rs Oi rs Oi rs Oi rs Oi rs Oi rs Oi rs</marquee>
+        <a target="_blank" href="http://userbars.ru/"><img src="https://i.imgur.com/VMZVhOd.png" border="0"></a>
+        <a target="_blank" href="http://userbars.ru/"><img src="https://i.imgur.com/MsYRgcI.jpg" border="0"></a>
     </header>
 
     <section class="all">
@@ -22,12 +23,12 @@
         <div class="left">
 
             <div class="last-update">
-                <div class="title-update"></div>
+                <div class="title-update">Update Log</div>
                 <div class="list-update">
 
                     <article class="up-update">
-                        <div class="icon-update"></div>
-                        <div class="data-update"></div>
+                        <div class="icon-update" id="updateIMG01"></div>
+                        <div class="data-update">§ visual additions<br>04-12-24</div>
                     </article>
                     <article class="up-update">
                         <div class="icon-update"></div>
@@ -93,10 +94,30 @@
                 <div class="profile">
                     <div class="backimg">
                         <div class="framephoto">
-                            <div class="photo"></div>
+                            <div class="photo">
+                                <div class="photoframe"></div>
+                            </div>
                         </div>
 
-                        <div class="bio"></div>
+                        <div class="bio">
+
+                            <p>[ estp, libra , brazilian ] <br> [ pfp is me ] [ he / him ] <br><br> Mood: man kills his
+                                bestfriend after 10 hour anal session</p>
+                        </div>
+
+                        <div class="bioimages">
+                            <div class="bimg1"></div>
+                            <div class="bimg2"></div>
+                            <div class="bimg3"></div>
+                            <div class="bimg4"></div>
+                            <div class="bimg5"></div>
+                            <div class="bimg6"></div>
+                            <div class="bimg7"></div>
+                            <div class="bimg8"></div>
+                            <div class="bimg9"></div>
+                            <div class="bimg10"></div>
+                            <div class="bimg11"></div>
+                        </div>
 
                         <div class="socialmedia">
                             <button class="social-instagram" id="sociallink">
@@ -127,15 +148,17 @@
                 <div class="hall">
 
                     <div class="buttonsiframe">
-                        <button href="a/01.html">About Me</button>
-                        <button href="a/02.html">Writing</button>
-                        <button href="a/03.html">Art</button>
-                        <button href="a/04.html">Photos</button>
-                        <button data-src="a/05.html">IDK</button> <!-- caso clicado navegar até pagina -->
+                        <button data-src="homepages/aboutme.html">About Me</button>
+                        <button data-src="homepages/">Writing</button>
+                        <button data-src="homepages/">Art</button>
+                        <button data-src="homepages/">Photos</button>
+                        <button data-src="homepages/05.html">IDK</button> <!-- caso clicado navegar até pagina -->
                     </div>
 
                     <div class="corpo">
-                        <iframe class="home" name="frame" src="a/home" height="100%" width="100%" scrolling="yes">
+                        <div class="homedesc"><p>About me</p></div>
+                        <iframe class="home" name="frame" src="homepages/aboutme.html" height="100%" width="100%"
+                            scrolling="yes">
                         </iframe>
                         <div class="visdiv01"></div>
                         <div class="subhome"></div>
@@ -159,37 +182,38 @@
                 <div class="player">
                     <div class="wrapper">
                         <div class="details">
-            
+
                             <div class="slider_containertop">
                                 <div class="iconvolume"></div>
-                                <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                                <input type="range" min="0" max="100" value="99" class="volume_slider"
+                                    onchange="setVolume()">
                             </div>
                             <div class="track-art"></div>
                             <div class="track-name">Track Name</div>
-            
+
                         </div>
-            
+
                         <div class="slider_container">
                             <div class="current-time">00:00</div>
                             <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
                             <div class="total-duration">00:00</div>
                         </div>
-            
-            
+
+
                         <div class="buttons">
-            
+
                             <div class="prev-track" onclick="prevTrack()">
-                                <img>
+                                <div></div>
                             </div>
                             <div class="playpause-track" onclick="playpauseTrack()">
-                                <img class="play">
+                                <div class="play"></div>
                             </div>
                             <div class="next-track" onclick="nextTrack()">
-                                <img>
+                                <div></div>
                             </div>
-            
+
                         </div>
-            
+
                     </div>
                 </div>
 
@@ -203,7 +227,7 @@
     </section>
 
     <script src="script.js">
-        
+
     </script>
 
 </body>
