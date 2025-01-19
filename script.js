@@ -1,3 +1,10 @@
+// Iniciando o style do chat
+
+chattable.initialize({
+    stylesheet: "chattable.css"
+});
+
+
 // Seleção dos elementos do DOM
 let track_name = document.querySelector('.track-name');
 let playpause_btn = document.querySelector('.playpause-track');
@@ -17,24 +24,44 @@ let curr_track = new Audio(); // Inicializa o objeto de áudio
 // Lista de músicas
 const music_list = [
     {
-        name: 'The Reason',
-        music: 'packages/music/TheReason.mp3',
-        image: 'packages/music/img/TheReason.jpg'
+        name: 'Too old to be cool - jaspertine',
+        music: 'packages/music/jaspertine_-_Too_old_to_be_cool_8.mp3',
+        image: 'packages/music/img/jaspertine.jpg'
     },
     {
-        name: 'Falling Down',
-        music: 'music/fallingdown.mp3',
-        image: 'images/fallingdown.jpg'
+        name: 'still i - sleeperspaceborn',
+        music: 'packages/music/sleeperspaceborn_-_still_i.mp3',
+        image: 'packages/music/img/sleeperspaceborn.png'
     },
     {
-        name: 'Faded',
-        music: 'music/Faded.mp3',
-        image: 'images/faded.png'
+        name: 'Venom - echo_orbit',
+        music: 'packages/music/echo_orbit_-_Venom.mp3',
+        image: 'packages/music/img/echo_orbit.jpg'
     },
     {
-        name: 'Rather Be',
-        music: 'music/Rather Be.mp3',
-        image: 'images/ratherbe.jpg'
+        name: 'redlightriot - sleeperspaceborn',
+        music: 'packages/music/sleeperspaceborn_-_redlightriot_2.mp3',
+        image: 'packages/music/img/sleeperspaceborn.png'
+    },
+    {
+        name: 'never grow old. - sleeperspaceborn',
+        music: 'packages/music/sleeperspaceborn_-_never_grow_old._1.mp3',
+        image: 'packages/music/img/sleeperspaceborn.png'
+    },
+    {
+        name: 'dark rose - sleeperspaceborn',
+        music: 'packages/music/sleeperspaceborn_-_dark_rose.mp3',
+        image: 'packages/music/img/sleeperspaceborn.png'
+    },
+    {
+        name: 'Sacred Light - Aussens@iter',
+        music: 'packages/music/tobias_weber_-_Sacred_Light.mp3',
+        image: 'packages/music/img/Aussens_iter.jpg'
+    },
+    {
+        name: 'Sound Effects Volume One - Apoxode',
+        music: 'packages/music/Apoxode_-_Sound_Effects_Volume_One.mp3',
+        image: 'packages/music/img/apoxode.jpg'
     }
 ];
 
@@ -154,6 +181,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const neocitiesButton = document.querySelector('.social-neocities');
 
 
+
     if (instagramButton) {
         instagramButton.addEventListener('click', function () {
             window.open('https://www.instagram.com/toxnyc/', '_blank');
@@ -191,11 +219,38 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', function () {
             const iframe = document.querySelector('iframe[name="frame"]');
             
+            
             const targetPage = button.dataset.src;
             if (iframe && targetPage) {
                 iframe.src = targetPage;
             }
+            
+            
+            const homedescnam = document.querySelector('.homedescname')
+            homedescnam.textContent = button.textContent
         });
     });
 
 });
+
+
+function realevasImg() {
+
+    const realeva = document.querySelector('.realeva')
+    let realevaNum = 1
+    setInterval(() => {
+            realeva.style.background = `url(packages/eva/${realevaNum}.jpeg)`
+            realeva.style.backgroundSize = `cover`
+            realeva.style.backgroundPosition = `center`
+
+
+        realevaNum++
+        if (realevaNum > 16) {
+            realevaNum = 1
+        }
+
+    }, 1000)
+
+}
+
+realevasImg()

@@ -1,22 +1,23 @@
 /*                       VÁLIDO PARA TODO DOCUMENTO                      */
-*{
+* {
 
-    cursor: url(packages/gifs/cursor1.gif), auto;
+    cursor: url(packages/gifs/cursor3.gif), auto;
 }
 
-body{
+
+body {
     background-color: #000000;
     background-image: url(packages/background.jpeg);
     background-size: cover;
     background-position: center;
-    background-repeat:no-repeat;
-
-
+    background-repeat: no-repeat;
+    
+    
     padding: 0;
     margin: 0;
 }
 
-@font-face{
+@font-face {
     font-family: 'GrapeSoda';
     src: url(packages/fonts/GrapeSoda.ttf);
 }
@@ -43,15 +44,19 @@ body{
 
 /*                       DIVISÕES PRINCIPAIS                      */
 
+.oso{
+    display: none;
+}
 
-.header{
+.header {
     background-color: blueviolet;
+    display: none;
     width: 100%;
     height: 5vh;
     min-width: 100vh;
 }
 
-.all{
+.all {
     background-color: transparent;
 
     display: grid;
@@ -66,7 +71,7 @@ body{
     margin: 5vh auto;
 }
 
-.left{
+.left {
 
     /* background-color: pink; */
     justify-content: center;
@@ -78,7 +83,7 @@ body{
     margin: auto;
 }
 
-.center{
+.center {
     background-color: #000000af;
 
     width: 100%;
@@ -86,9 +91,11 @@ body{
     margin: auto;
 }
 
-.right{
+.right {
 
     /* background-color: pink; */
+    justify-content: center;
+    align-items: center;
 
     width: 100%;
     height: 150vh;
@@ -98,28 +105,28 @@ body{
 
 /*                        COMPONENTES DO ESQUERDA                          */
 
-.last-update{
+.last-update {
     /*background-color: blue;*/
-    background-color:rgba(14, 14, 14, 0.63) ;
+    background-color: rgba(14, 14, 14, 0.63);
     display: grid;
     grid-template-rows: 10% 90%;
     float: right;
-    
+
     border: 1px dashed #fff;
 
     color: #fff;
-    
+
     margin: 5vh auto;
     width: 90%;
     height: 40vh;
 }
 
-.title-update{
+.title-update {
     /*background-color: burlywood;*/
     display: flex;
 
     padding: 1vh;
-    
+
     font-family: 'DigitalDiscoThin';
     font-size: 4vh;
 
@@ -129,45 +136,45 @@ body{
 }
 
 
-.list-update{
+.list-update {
 
     /*background-color:lawngreen ;*/
     display: flexbox;
 
     overflow-y: scroll;
-    
+
     /*unicode-bidi: isolate; */
-    
+
     margin: auto;
     width: 90%;
     height: 90%;
 }
 
-.list-update::-webkit-scrollbar{
+.list-update::-webkit-scrollbar {
     width: 10px;
     background-color: rgba(151, 151, 151, 0.397);
 }
 
-.list-update::-webkit-scrollbar-button{
+.list-update::-webkit-scrollbar-button {
     /*background-color:coral;*/
     height: 0%;
 }
 
-.list-update::-webkit-scrollbar-thumb{
+.list-update::-webkit-scrollbar-thumb {
     background-color: rgba(22, 22, 22, 0.603);
 }
 
-.up-update{
+.up-update {
     display: grid;
     grid-template-columns: 30% 70%;
- 
 
-    margin: 4% 0;
+
+    margin: 2vh 0;
     width: 100%;
     height: 15%;
 }
 
-.icon-update{
+.icon-update {
     /*background-color: aquamarine;*/
     background-size: cover;
     background-position: center;
@@ -177,11 +184,15 @@ body{
     height: 5vh;
 }
 
-#updateIMG01{
+#updateIMG01 {
     background-image: url(packages/oldicon01.png);
 }
 
-.data-update{
+#updateIMG02 {
+    background-image: url(packages/gifs/56d4a0d9.gif);
+}
+
+.data-update {
     /*background-color: darkkhaki;*/
 
     font-size: 2vh;
@@ -192,22 +203,33 @@ body{
     height: 100%;
 }
 
-.gif01{
-    background-color: #fff;
-    background-image: url(packages/gifs/gif01.gif);
-    background-size: cover;
-    image-rendering: pixelated;
+.bordadiv {
+    background-color: #000000cb;
 
     margin: 0 auto;
     display: flex;
 
-    
+
+    width: 23vh;
+    height: 23vh;
+
+}
+
+.realeva {
+
+    background-size: cover;
+    image-rendering: pixelated;
+
+    margin: auto;
+    display: flex;
+
+
     width: 20vh;
     height: 20vh;
 }
 
-.outleft{
-    display:grid;
+.outleft {
+    display: grid;
     grid-row: 30% 20% 50%;
     margin: 4vh 0;
     float: right;
@@ -219,32 +241,32 @@ body{
     height: 80vh;
 }
 
-.chat{
-
+.outleft iframe {
     margin: 0;
 
-    background-color:violet;
+
     width: 100%;
-    height: 20vh;
+    height: 100%;
 }
+
 
 
 /*                       COMPONENTES DO RIGHT                      */
 
 
-.outright{
+.outright {
     /*background-color:hotpink;*/
-    display: flexbox;
+
     float: left;
     margin: 15vh 0 0 0;
 
     width: 30vh;
-    height: 128vh; 
+    height: 128vh;
 }
 
 /*                       PLAYER DISPLAY                      */
 
-.wrapper{
+.wrapper {
     display: grid 5vh 20vh 4vh 5vh;
     width: 30vh;
     height: 40vh;
@@ -252,32 +274,32 @@ body{
     border: dashed 1.5px #fff;
 
     color: #fff;
-  }
-  
-  .details {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  }
+}
 
-  .slider_containertop{
+.details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slider_containertop {
     /*background-color: #9a1d86;*/
     display: grid;
     grid-template-columns: 5vh 35vh;
 
     height: 5vh;
     width: 30vh;
-  }
+}
 
-  .slider_containertop input{
+.slider_containertop input {
     margin: auto 0;
     width: 70%;
     display: flex;
     float: right;
-  }
+}
 
-  .iconvolume{
+.iconvolume {
     display: flex;
 
     margin: 1vh;
@@ -287,25 +309,25 @@ body{
     background-image: url(packages/audioicon.png);
     background-size: cover;
     image-rendering: pixelated;
-  }
-  
-  .track-art {
+}
 
-  width: 20vh;
-  height: 20vh;
-  border:2px solid 	#FFFAFA;
-  background-size: cover;
-  background-position: center;
-  }
-  
+.track-art {
 
-  
-  .track-name {
+    width: 20vh;
+    height: 20vh;
+    border: 2px solid #FFFAFA;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.track-name {
     /*background-color: blueviolet;*/
     font-size: 1rem;
-  }
-  
-  .buttons{
+}
+
+.buttons {
     /*background-color: #e09627;*/
     display: flex;
     justify-content: space-around;
@@ -315,14 +337,14 @@ body{
 
 }
 
-.buttons div{
+.buttons div {
     background-color: transparent;
     margin: auto;
     width: 5vh;
     height: 5vh;
 }
 
-.prev-track div{
+.prev-track div {
     background-image: url(packages/previcon.png);
     background-size: cover;
     image-rendering: pixelated;
@@ -330,7 +352,7 @@ body{
     height: 100%;
 }
 
-.pause{
+.pause {
     background-image: url(packages/pauseicon.png);
     background-size: cover;
     image-rendering: pixelated;
@@ -339,36 +361,37 @@ body{
     height: 100%;
 }
 
-.play{
-  background-image: url(packages/playicon.png);
-  background-size: cover;
-  image-rendering: pixelated;
-  width: 100%;
-  height: 100%;
+.play {
+    background-image: url(packages/playicon.png);
+    background-size: cover;
+    image-rendering: pixelated;
+    width: 100%;
+    height: 100%;
 }
 
-.next-track div{
+.next-track div {
     background-image: url(packages/nexticon.png);
     background-size: cover;
     image-rendering: pixelated;
     width: 100%;
     height: 100%;
-}  
-  
+}
+
 .slider_container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-  
-.seek_slider, .volume_slider {
+
+.seek_slider,
+.volume_slider {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     height: 5px;
     background: rgb(81, 81, 102);
 }
-  
+
 .seek_slider::-webkit-slider-thumb,
 .volume_slider::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -383,11 +406,11 @@ body{
     cursor: grab;
 
 }
-  
+
 .seek_slider {
     width: 60%;
 }
-  
+
 .volume_slider {
     width: 90%;
 }
@@ -398,39 +421,103 @@ body{
 
 
 
-.music-list{
-    background-color:darkcyan;
+.music-list {
+    /*background-color: darkcyan;*/
+    background-image: url(packages/photoback02.jpeg);
+    background-position: center;
+    background-size: cover;
     display: grid;
+    grid-template-rows: 30vh 30vh;
 
+    margin: 3vh 0;
     width: 100%;
     height: 60vh;
 }
 
-.music-roll{
-    background-color:goldenrod;
+.webbutton{
+    background-color: #000000cb;
+
     display: grid;
+    grid-template-rows: 40% 60%;
+    width: 100%;
+    height: 30vh;
+}
+
+
+.mybutton{
+    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: 'DigitalDisco';
+    color: #fff;
+}
+
+
+.webbutton img {
+    margin: auto;
+    width: 88px;
+    height: 31px;
+}
+
+.webbutton textarea{
+    background-color: #000;
+    color: #fff;
+    resize: none;
+    margin: 2vh;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.lawliet{
+    background-color: #000000cb;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.lawliet img {
+    image-rendering: pixelated;
+    margin: 10%;
+    width: 25vh;
+    height: 25vh;
+}
+
+.music-roll {
+    /*background-color: goldenrod;*/
+    display: flex;
 
     width: 100%;
     height: 35vh;
 }
 
+.divdot1 {
+    /*background-color: azure;*/
+    display: flexbox;
+    padding: 1vh 0vh 0vh 1vh;
+    width: 100%;
+    height: 100%;
+}
+
 /*                            COMPONENTES CENTRAIS                           */
 
-.top{
+.top {
     background-color: red;
-    background: url(packages/bannertox.png);
+    background: url(packages/bannertic-01.png);
     background-size: cover;
     image-rendering: pixelated;
 
-    display: flexbox;
-    float:none;
+    display: block;
+    float: none;
     margin: auto;
 
-    width: 120vh;
+    width: 100%;
     height: 28vh;
 }
 
-.bottom{
+.bottom {
     /*background-color:crimson;*/
     display: grid;
     grid-template-columns: 30% 70%;
@@ -440,11 +527,11 @@ body{
     height: 100%;
 }
 
-.visdiv02{
+.visdiv02 {
     /*background-color:fuchsia;*/
     background-image: url(packages/visdiv02.png);
-    background-repeat:repeat-x;
-    background-size:contain;
+    background-repeat: repeat-x;
+    background-size: contain;
     BACKGROUND-POSITION: CENTER;
 
     display: flex;
@@ -456,8 +543,8 @@ body{
     margin-top: 2vh;
 }
 
-.footer{
-    background-color:#000;
+.footer {
+    background-color: #000;
     display: flex;
     float: none;
 
@@ -467,12 +554,12 @@ body{
     margin-bottom: 5vh;
 }
 
-.profile{
+.profile {
     /*background-color: #011826;*/
     border: dashed #fff 1.5px;
 
     display: flex;
-    float:left;
+    float: left;
 
     margin: auto;
     width: 95%;
@@ -480,7 +567,7 @@ body{
 }
 
 
-.bio{
+.bio {
     /*background-color: darkorange;*/
     display: flex;
     grid-column: 3;
@@ -497,9 +584,9 @@ body{
     color: #fff;
 }
 
-.bioimages{
+.bioimages {
     /*background-color: orange;*/
-    
+
     width: 100%;
     height: 110%;
 }
@@ -512,41 +599,51 @@ body{
     height: 4.1vh;
 }
 
-.bimg1{
-    background-image: url(packages/gifs/IMG_7386.gif);
+.bimg1 {
+    background-image: url(packages/gifs/tumblr_oy9agy2FGN1tganp7o2_250.gif);
 }
-.bimg2{
+
+.bimg2 {
     background-image: url(packages/gifs/blinky8.gif);
 }
-.bimg3{
-    background-image: url(packages/gifs/032.gif);
+
+.bimg3 {
+    background-image: url(packages/gifs/tumblr_6d12a2374206fe6e8fde0798e3e32894_fa1336eb_250.webp);
 }
-.bimg4{
+
+.bimg4 {
     background-image: url(packages/gifs/d4041c92_original.gif);
 }
-.bimg5{
+
+.bimg5 {
     background-image: url(packages/gifs/depression.gif);
 }
-.bimg6{
+
+.bimg6 {
     background-image: url(packages/gifs/emomusicfan.gif);
 }
-.bimg7{
-    background-image: url(packages/gifs/innocent.gif);
+
+.bimg7 {
+    background-image: url(packages/gifs/1564181t14241bxnn.gif);
 }
-.bimg8{
+
+.bimg8 {
     background-image: url(packages/gifs/QyRdafW.gif);
 }
-.bimg9{
+
+.bimg9 {
     background-image: url(packages/gifs/sinnerBLINK.gif);
 }
-.bimg10{
-    background-image: url(packages/gifs/urteeth.gif);
+
+.bimg10 {
+    background-image: url(packages/gifs/y14.gif);
 }
-.bimg11{
+
+.bimg11 {
     background-image: url(packages/gifs/WVOARo0.gif);
 }
 
-.socialmedia{
+.socialmedia {
     background-color: darkred;
     margin: 0 auto;
     margin-top: 10%;
@@ -554,19 +651,18 @@ body{
     height: 30vh;
 }
 
-.social-instagram{
+.social-instagram {
     background-color: pink;
     display: flex;
 
     width: 100%;
-    height:20%
-
+    height: 20%
 }
 
-#sociallink a{
+#sociallink a {
 
     background-size: cover;
-    image-rendering:pixelated;
+    image-rendering: pixelated;
     display: flex;
     border: none;
 
@@ -575,103 +671,103 @@ body{
     height: 4vh;
 }
 
-.social-instagram{
+.social-instagram {
     background: linear-gradient(180deg, rgb(255, 43, 15) 0%, rgb(255, 23, 92) 45%, rgb(138, 0, 119) 47%, rgb(133, 0, 138) 60%, rgb(84, 0, 153) 100%);
 
     border: dashed 1.5px rgb(255, 255, 255);
 }
 
-.social-instagram:hover{
-    filter:brightness(1.5);
+.social-instagram:hover {
+    filter: brightness(1.5);
     transition: 0.5s;
 }
 
-.social-instagram:active{
+.social-instagram:active {
     box-shadow: rgba(15, 15, 29, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.61) 0px 18px 36px -18px inset;
 }
 
-.social-instagram a{
+.social-instagram a {
     background-image: url(packages/InstagramIcon.png);
 
 }
 
-.social-steam{
+.social-steam {
     background: linear-gradient(180deg, #0B5B8E 0%, #002b6b 45%, rgb(14, 23, 44) 47%, #06152D 60%, rgb(0, 10, 43) 100%);
 
     border: dashed 1.5px rgb(255, 255, 255);
 }
 
-.social-steam:hover{
-    filter:brightness(1.5);
+.social-steam:hover {
+    filter: brightness(1.5);
     transition: 0.5s;
 }
 
-.social-steam:active{
+.social-steam:active {
     box-shadow: rgba(15, 15, 29, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.61) 0px 18px 36px -18px inset;
 }
 
-.social-steam a{
+.social-steam a {
     background-image: url(packages/SteamIcon.png);
 }
 
-.social-github{
+.social-github {
     background: linear-gradient(180deg, #1a1f22 0%, #0b1016 45%, rgb(0, 0, 0) 47%, #080a0c 60%, rgb(0, 1, 3) 100%);
 
     border: dashed 1.5px rgb(255, 255, 255);
 }
 
-.social-github:hover{
-    filter:brightness(1.5);
+.social-github:hover {
+    filter: brightness(1.5);
     transition: 0.5s;
 }
 
-.social-github:active{
+.social-github:active {
     box-shadow: rgba(15, 15, 29, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.61) 0px 18px 36px -18px inset;
 }
 
-.social-github a{
+.social-github a {
     background-image: url(packages/GithubIcon.png);
 }
 
-.social-spotify{
+.social-spotify {
     background: linear-gradient(180deg, #00b941 0%, #006b3e 45%, rgb(6, 56, 29) 47%, #004117 60%, rgb(0, 43, 27) 100%);
 
     border: dashed 1.5px rgb(255, 255, 255);
 }
 
-.social-spotify:hover{
-    filter:brightness(1.5);
+.social-spotify:hover {
+    filter: brightness(1.5);
     transition: 0.5s;
 }
 
-.social-spotify:active{
+.social-spotify:active {
     box-shadow: rgba(15, 15, 29, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.61) 0px 18px 36px -18px inset;
 }
 
-.social-spotify a{
+.social-spotify a {
     background-image: url(packages/SpotifyIcon.png)
 }
 
-.social-neocities{
+.social-neocities {
     background: linear-gradient(180deg, #c98b2e 0%, #ce551e 45%, rgb(189, 43, 38) 47%, #d42525 60%, rgb(216, 35, 22) 100%);
 
     border: dashed 1.5px rgb(255, 255, 255);
 }
 
-.social-neocities:hover{
-    filter:brightness(1.5);
+.social-neocities:hover {
+    filter: brightness(1.5);
     transition: 0.5s;
 }
 
-.social-neocities:active{
+.social-neocities:active {
     box-shadow: rgba(15, 15, 29, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.61) 0px 18px 36px -18px inset;
 }
 
-.social-neocities a{
+.social-neocities a {
     background-image: url(packages/NeocitiesIcon.png);
 }
 
-#sociallink p{
+#sociallink p {
     color: #ffffff;
     display: flex;
     margin: auto;
@@ -681,46 +777,41 @@ body{
 }
 
 
-.social-steam{
+.social-steam {
     /*background-color:royalblue;*/
     display: flex;
 
     width: 100%;
-    height:20%
-
-
+    height: 20%
 }
 
-.social-github{
+.social-github {
     /*background-color:teal;*/
     display: flex;
 
     width: 100%;
-    height:20%
-
+    height: 20%
 }
 
-.social-spotify{
+.social-spotify {
     /*background-color:lawngreen;*/
     display: flex;
 
     width: 100%;
-    height:20%
-
+    height: 20%
 }
 
-.social-neocities{
+.social-neocities {
     /*background-color: yellow;*/
     display: flex;
 
     width: 100%;
-    height:20%
-
+    height: 20%
 }
 
-.backimg{
+.backimg {
     /*background-color: blue;*/
-    background-image: url(packages/photoback01.jpg);
+    background-image: url(packages/galery/sech2.jpg);
     background-size: cover;
     background-position: center;
 
@@ -729,7 +820,7 @@ body{
     height: 30%;
 }
 
-.framephoto{
+.framephoto {
     background-image: url(packages/gifphotoback.gif);
     background-size: cover;
     background-position: center;
@@ -742,8 +833,11 @@ body{
 
 }
 
-.photo{
-    background-color:mediumslateblue; 
+.photo {
+    background-image: url(packages/1736908485428.jpg);
+    background-size: cover;
+    background-position: center;
+    image-rendering: crisp-edges;
 
     margin: auto;
     width: 20vh;
@@ -751,16 +845,17 @@ body{
 
 }
 
-.photoframe{
+.photoframe {
     background-image: url(packages/photoframe.png);
     background-size: 120%;
     background-position: center;
+    display: none;
 
     width: 100%;
     height: 100%;
 }
 
-.hall{
+.hall {
     /*background-color:darkmagenta;*/
     display: grid;
     grid-template-rows: 5% 95%;
@@ -769,15 +864,15 @@ body{
     height: 100%;
 }
 
-.corpo{
+.corpo {
     /*background-color:chocolate;*/
     border: dashed #fff 1.5px;
-    
+
     display: grid;
-    grid-template-rows: 5vh 60% 2vh 30%;
+    grid-template-rows: 5vh 85% 2vh 10%;
 
     float: right;
-    
+
     padding: 1vh;
 
     margin: 0 auto;
@@ -785,7 +880,7 @@ body{
     height: 99%;
 }
 
-.homedesc{
+.desc {
     background-color: black;
     margin-bottom: 5vh;
     width: 100%;
@@ -799,7 +894,7 @@ body{
     margin: -2vh 1vh;
 }
 
-.home{
+.home {
     /*background-color: chartreuse;*/
     border: none;
 
@@ -809,26 +904,37 @@ body{
     height: 100%;
 }
 
-.home::-webkit-scrollbar{
-
-}
-
-.visdiv01{
+.visdiv01 {
     background-image: url(packages/gifs/visdiv01.gif);
     background-repeat: repeat-x;
     width: 100%;
     height: 100%;
 }
 
-.subhome{
-    background-color: midnightblue;
+.subhome {
+    /*background-color: midnightblue;*/
+    display: flex;
 
     margin: auto;
     width: 100%;
-    height: 90%;
+    height: 100%;
 }
 
-.buttonsiframe{
+.otherbutton {
+    display: flex;
+    margin: auto;
+
+    justify-content: space-around;
+    width: 100%;
+    height: 10vh;
+}
+
+.otherbutton img {
+    width: 12vh;
+    height: 7vh;
+}
+
+.buttonsiframe {
     /*background-color:mediumseagreen;*/
 
     display: flex;
@@ -841,10 +947,10 @@ body{
     height: 100%;
 }
 
-.buttonsiframe button{
+.buttonsiframe button {
     /*background-color:blueviolet;*/
 
-    border:none;
+    border: none;
 
     border-radius: 4px;
     background: linear-gradient(180deg, rgb(17, 17, 17) 0%, rgb(65, 65, 65) 45%, rgb(46, 46, 46) 47%, rgb(0, 0, 0) 100%);
@@ -860,61 +966,446 @@ body{
     font-size: 3vh;
 }
 
-iframe{
+iframe {}
 
+.br{
+    display: none;
 }
 
 
 /*                              AJUSTANDO TELA PARA CELULARES                          */
 
+@media screen and (max-width: 1475px) {
 
-@media screen and (max-width: 960px){
-    .all{
+.all{
+    background-color: transparent;
+
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+
+    justify-content: space-between;
+
+
+    width: 100%;
+    height: 90%;
+
+    margin: 5vh auto;
+}
+
+.left{
+    margin: 0;
+}
+
+.center{
+    margin: 0;
+}
+
+.right{ 
+    margin: 0;
+}
+
+
+}
+
+
+
+@media screen and (max-width: 1360px) {
+    .all {
         display: grid;
-        grid-template-columns: 1fr 1fr; /*duas colunas iguais*/
-        grid-template-rows:auto auto ;
+        grid-template-columns: 1fr 1fr;
+        /*duas colunas iguais*/
+        grid-template-rows: auto auto;
     }
 
-    .footer{
+    .footer {
         display: none;
     }
 
-    .last-update{
-        display: none;
-    }
-
-    .center{
-        grid-column: 1 / span 2; /*ocupando as duas colunas*/
+    .center {
+        grid-column: 1 / span 2;
+        /*ocupando as duas colunas*/
         justify-self: center;
         width: 100%;
+
+        margin: 0 0 5vh 0;
     }
 
-    .left, .right{
-        display: block;
+    .left,
+    .right {
+        display: flex;
         margin: 0;
-        width: 50%;
+        width: 100%;
         height: 80vh;
         order: 2;
     }
 
-    .left{
+    .right {
+        grid-column: 2;
+
+        width: 100%;
+    }
+
+    .outleft,
+    .outright {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+
+
+    }
+
+    .left {
         grid-column: 1;
 
         width: 100%;
 
+        display: flex;
+        margin: auto;
+        margin-top: 38vh;
+        background-color: #000000e7;
+        border: dashed white 1px;
+    }
+
+    .right {
+        display: flex;
+        margin: auto;
+        margin-top: 38vh;
+    }
+
+    .outright {
+        display: grid;
+        grid-template-rows: 35% 45% 20%;
+    }
+
+    .left div,
+    .outright div {
+        border: none;
+    }
+
+    .bordadiv {
+        display: none;
+    }
+
+    .last-update {
+        height: 100%;
+    }
+
+    .list-update {
+        background-color: rgba(37, 37, 37, 0.24);
+    }
+
+    .music-list {
+        display: none;
+    }
+
+    .player {
+        margin: auto;
+    }
+
+    .music-roll {
+        margin: 15vh auto;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .home {
+        width: 100%;
+    }
+
+    .hall {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    * {
+        margin: 0;
+    }
+    
+    body {
+        width: 100%;
+    }
+    
+    .all {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+
+        grid-template-columns: 100%;
+        grid-template-rows: 200vh 85vh 80vh;
+    }
+
+    .top {
+        background-image: url(packages/mobilebanner.png);
+        width: 100%;
+        background-position:center;
+    }
+
+    .bottom {
+        grid-template-rows: 30% 70%;
+        grid-template-columns: 100%;
+    }
+
+    .profile {
+        display: flex;
+        justify-content: space-around;
+        grid-template-rows: 0;
+    }
+
+    .backimg {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        width: 100%;
+        height: 95%;
+    }
+
+    .portable {
+        background-color: #000000af;
+        width: 100%;
+        font-size: 1.5vh;
+    }
+
+    .bio {
+        text-shadow: -2px 6px 21px rgba(0, 0, 0, 1);
+        margin: auto;
+        width: 80%;
+        height: 16vh;
+    }
+
+    .framephoto {
+        width: 100%;
+        margin:  auto;
+        display: flex;
+    }
+
+    .photo {
+        display: flex;
+        margin: auto;
+    }
+
+    .bioimages {
+        background-color: #000000af;
+        margin: auto;
+        align-content:space-between;
+        float: right;
+        width: 100%;
+        height: 100%;
+    }
+
+    .bioimages div {
+        background-position: center;
+        width: 100%;
+        height: 7%;
+    }
+
+    .socialmedia {
+        display: none;
+        margin: 0;
+        float: right;
+        width: 8vh;
+        height: 100%;
+    }
+
+    #sociallink {
+        display: flex;
+        float: right;
+    }
+
+    #sociallink a {
+        margin: auto;
+    }
+
+    #sociallink p {
+        display: none;
+    }
+
+    .buttonsiframe {
+        /*background-color:mediumseagreen;*/
+    
+        display: flex;
+        float: none;
+
+        display: grid;
+        grid-template-columns: 15% 15% 15% 15% 15%;
+    
+        justify-content: space-around;
+        align-items: center;
+
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    
+    .buttonsiframe button {
+        /*background-color:blueviolet;*/
+    
+        border: none;
+    
+        border-radius: 0px;
+        background: linear-gradient(180deg, rgb(17, 17, 17) 0%, rgb(65, 65, 65) 45%, rgb(46, 46, 46) 47%, rgb(0, 0, 0) 100%);
+        padding-left: 0px;
+        border: solid 2px gray;
+        filter: drop-shadow(0 0.5px 0 gray) drop-shadow(0 0.5px 0 gray) drop-shadow(0 0.5px 0.5px gray) drop-shadow(0.5px 0.5px 1px gray) drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0 black);
+    
+        width: 100%;
+        height: 100%;
+    
+        color: #fff;
+        font-family: 'OwreKynge';
+        font-size: 20px;
+    }
+
+    .hall {
+        width: 100%;
+        grid-template-rows: 8% 90%;
+    }
+
+    .home {
+        width: 100%;
+        margin: 0;
+    }
+
+    .visualdiv01 {
+        display: none;
+    }
+
+    .subhome {
+        background-color: #000000e5;
+        border: dashed 1px white;
+        display: block;
+        margin: 2vh 0;
+
+        width: 100%;
+        height: 20vh;
+    }
+
+    .otherbutton{
+        display: block;
+        width: 100%;
+        height: 100%;
+        justify-content: space-around;
+    }
+    
+    .otherbutton img {
+        width: 32%;
+        height: 50%;
+        margin: auto;
+        justify-self: center;
+    }
+
+    .outleft {
+        display: flex;
+    }
+
+    .outright {
+        background-color: #000000cc;
+        display: grid;
+        grid-template-columns: 0;
+        grid-template-rows: 70% 30%;
+        grid-template-columns: 70% 30%;
+    }
+
+    .left {
+        order:  3;
+        width: 100%;
+        display: grid;
+        padding: 0;
+        margin: 0;
+        grid-template-columns: 50% 50%;
     }
 
     .right{
-        grid-column: 2;
-
+        grid-column: 1;
+        order: 2;
         width: 100%;
-
+        display: block;
+        padding: 0;
+        margin: 0;
+        float: none;
     }
 
-    .outleft, .outright{
+    .last-update {
+        display: grid;
+        grid-template-rows: 10% 90%;
+        margin: 0;
         width: 100%;
         height: 100%;
+    }
+
+    .list-update{
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .up-update{
+        margin: 2% 0;
+    }
+
+    .title-update{
+        display: flex;
+        width: 100%;
+    }
+
+    .outleft {
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+        width: 100%;
+        height: 100%;
+    }
+    
+    .player{
+        display: block;
+
+    }
+    
+    .music-list{
+        display: flex;
+        margin: 0;
+        width: 100%;
+        height: 80vh;
+    }
+
+    .webbutton{
+        display: none;
+    }
+
+    .lawliet{
+        display: none;
+    }
+
+    .oso{
+        display: block;
+        width: 100%;
+
+        grid-template-columns: 0;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+    }
+
+    #sociallink {
+        display: block;
+    }
+
+    #sociallink a {
+        display: block;
+    }
+
+    #sociallink p {
+    }
+    
+    .music-roll{
+        display:block;
         margin: 0;
     }
+
+    .music-roll img {
+        width: 30%;
+        margin: 0;
+    }
+
+
 
 }
