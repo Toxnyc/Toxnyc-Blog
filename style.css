@@ -169,7 +169,7 @@ body {
     grid-template-columns: 30% 70%;
 
 
-    margin: 2vh 0;
+    margin: 3vh 0;
     width: 100%;
     height: 15%;
 }
@@ -190,6 +190,10 @@ body {
 
 #updateIMG02 {
     background-image: url(packages/gifs/56d4a0d9.gif);
+}
+
+#updateIMG03 {
+    background-image: url(packages/keyboard-1.png);
 }
 
 .data-update {
@@ -230,7 +234,7 @@ body {
 
 .outleft {
     display: grid;
-    grid-row: 30% 20% 50%;
+    grid-template-rows: 7% 93%;
     margin: 4vh 0;
     float: right;
     padding: 4px;
@@ -239,6 +243,17 @@ body {
     /* background-color: tomato; */
     width: 85%;
     height: 80vh;
+}
+
+.outleft p {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(20, 20, 22, 0.534);
+    color: white;
+    font-family: 'OwreKynge';
+    font-size: 5vh;
 }
 
 .outleft iframe {
@@ -544,7 +559,7 @@ body {
 }
 
 .footer {
-    background-color: #000;
+    background-color: transparent;
     display: flex;
     float: none;
 
@@ -1018,7 +1033,7 @@ iframe {}
     }
 
     .footer {
-        display: none;
+        margin-top: 150vh;
     }
 
     .center {
@@ -1349,12 +1364,21 @@ iframe {}
     }
 
     .outleft {
-        display: flex;
+        display: grid;
+        grid-template-rows: 8% 92%;
         margin: 0;
         padding: 0;
 
         width: 100%;
         height: 100%;
+
+    }
+
+    .outleft p {
+        background-color: #151418c5;
+        font-family: 'DigitalDiscoThin';
+        padding: 1vh;
+        color: #ffffff;
     }
     
     .player{
@@ -1404,6 +1428,11 @@ iframe {}
     .music-roll img {
         width: 30%;
         margin: 0;
+    }
+
+    .buttons div {
+        width: 4vh;
+        height: 4vh;
     }
 
 

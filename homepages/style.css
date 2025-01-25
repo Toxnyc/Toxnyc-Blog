@@ -1,4 +1,4 @@
-*{
+* {
     cursor: url(../packages/gifs/cursor3.gif), auto;
     min-width: none;
 }
@@ -225,7 +225,7 @@ body::before {
     height: 40vh;
 }
 
-.hobcod{
+.hobcod {
     width: 100%;
     height: 40vh;
     display: grid;
@@ -239,11 +239,11 @@ body::before {
     height: 40vh;
 }
 
-.hobbies-pt1{
+.hobbies-pt1 {
     float: left;
 }
 
-.hobbies-pt2{
+.hobbies-pt2 {
     float: right;
 }
 
@@ -258,7 +258,7 @@ body::before {
 .hopt div {
     background-size: cover;
     background-position: center;
-    
+
     width: 100%;
     height: 30vh;
 }
@@ -299,7 +299,7 @@ body::before {
     margin-right: 1vh;
     width: 45%;
     height: 40vh;
-    
+
     font-family: 'Pixel';
     font-size: 1vh;
     color: white;
@@ -510,7 +510,8 @@ body::before {
     color: white;
 }
 
-.links a, .links a:visited {
+.links a,
+.links a:visited {
     font-family: 'Pixel';
     text-decoration: none;
     font-size: 1.5vh;
@@ -523,7 +524,7 @@ body::before {
     image-rendering: pixelated;
     width: 100%;
     height: 15vh;
-    
+
     margin: 5vh auto;
 }
 
@@ -548,13 +549,95 @@ body::before {
 }
 
 
-@media screen and (max-width: 666px){
+@media screen and (max-width: 666px) {
 
-    .hopt{
-    }
+    .hopt {}
 
     .ipiImg-About {
         display: none;
     }
+
+}
+
+/************************************     BLOG    ************************************************/
+
+.all-blog{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.letter{
+    margin: 3vh auto;
+    width: 95%;
+    height: 25vh;
+    background-color: black;
+    border-right: 5px ridge #ffffff;
+    border-bottom: 5px ridge #ffffff;
+    border-left: 5px ridge #ffffff;
+    display: grid;
+    grid-template-rows: 5vh 20vh;
+}
+
+.letter-title{
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: 25% 75%;
+
+    font-size: 1vh;
+    font-family: 'pixel';
+    color: white;
     
+}
+
+.letter-title div:nth-child(1){
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(49, 49, 49);
+}
+
+.letter-title div:nth-child(2){
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(22, 22, 22);
+}
+
+.letter-title p {
+    margin:  1vh;
+     
+}
+
+.letter-mensage{
+    font-family: 'Pixel';
+    color: white;
+    font-size: 1vh;
+    margin: auto;
+    width: 95%;
+    height: 100%;
+}
+
+
+.mme1{
+    display: flex;
+    width: 100%;
+    height: 20vh;
+}
+
+.mme1 img:nth-child(1){
+    display: flex;
+    background-color: white;
+    width: 65%;
+    height: 100%;
+}
+
+.mme1 img:nth-child(2){
+    display: flex;
+    background-color: black;
+    width: 34%;
+    height: 99%;
+    margin: auto;
 }
