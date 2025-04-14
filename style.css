@@ -1,292 +1,573 @@
-/*                       VÁLIDO PARA TODO DOCUMENTO                      */
-* {
-
-    cursor: url(packages/gifs/cursor3.gif), auto;
-}
-
-
-body {
-    background-color: #000000;
-    background-image: url(packages/background.jpeg);
-    background-size: cover;
+*{
     background-position: center;
-    background-repeat: no-repeat;
-    
-    
+    background-size: cover;
+    image-rendering: pixelated;
+
     padding: 0;
     margin: 0;
 }
 
-@font-face {
-    font-family: 'GrapeSoda';
-    src: url(packages/fonts/GrapeSoda.ttf);
-}
-
-@font-face {
-    font-family: 'OwreKynge';
-    src: url(packages/fonts/OwreKynge.ttf);
-}
-
-@font-face {
-    font-family: 'DigitalDisco';
-    src: url(packages/fonts/DigitalDisco.ttf);
-}
-
-@font-face {
-    font-family: 'DigitalDiscoThin';
-    src: url(packages/fonts/DigitalDisco-Thin.ttf);
-}
-
-@font-face {
-    font-family: 'HeinzHeinrich';
-    src: url(packages/fonts/HeinzHeinrich-Regular.otf);
-}
-
-/*                       DIVISÕES PRINCIPAIS                      */
-
-.oso{
-    display: none;
-}
-
-.header {
-    background-color: blueviolet;
-    display: none;
-    width: 100%;
-    height: 5vh;
-    min-width: 100vh;
-}
-
-.all {
-    background-color: transparent;
-
-    display: grid;
-    grid-template-columns: 16% 65% 16%;
-
-    justify-content: space-between;
-
-
-    width: 90%;
-    height: 90%;
-
-    margin: 5vh auto;
-}
-
-.left {
-
-    /* background-color: pink; */
-    justify-content: center;
-    align-items: center;
-
-    width: 100%;
-    height: 150vh;
-
-    margin: auto;
-}
-
-.center {
-    background-color: #000000af;
-
-    width: 100%;
-    height: 150vh;
-    margin: auto;
-}
-
-.right {
-
-    /* background-color: pink; */
-    justify-content: center;
-    align-items: center;
-
-    width: 100%;
-    height: 150vh;
-
-    margin: auto;
-}
-
-/*                        COMPONENTES DO ESQUERDA                          */
-
-.last-update {
-    /*background-color: blue;*/
-    background-color: rgba(14, 14, 14, 0.63);
-    display: grid;
-    grid-template-rows: 10% 90%;
-    float: right;
-
-    border: 1px dashed #fff;
-
-    color: #fff;
-
-    margin: 5vh auto;
-    width: 90%;
-    height: 40vh;
-}
-
-.title-update {
-    /*background-color: burlywood;*/
-    display: flex;
-
-    padding: 1vh;
-
-    font-family: 'DigitalDiscoThin';
-    font-size: 4vh;
-
-    margin: auto;
-    width: 100%;
-    height: 100%;
-}
-
-
-.list-update {
-
-    /*background-color:lawngreen ;*/
-    display: flexbox;
-
-    overflow-y: scroll;
-
-    /*unicode-bidi: isolate; */
-
-    margin: auto;
-    width: 90%;
-    height: 90%;
-}
-
-.list-update::-webkit-scrollbar {
-    width: 10px;
-    background-color: rgba(151, 151, 151, 0.397);
-}
-
-.list-update::-webkit-scrollbar-button {
-    /*background-color:coral;*/
-    height: 0%;
-}
-
-.list-update::-webkit-scrollbar-thumb {
-    background-color: rgba(22, 22, 22, 0.603);
-}
-
-.up-update {
-    display: grid;
-    grid-template-columns: 30% 70%;
-
-
-    margin: 3vh 0;
-    width: 100%;
-    height: 15%;
-}
-
-.icon-update {
-    /*background-color: aquamarine;*/
-    background-size: cover;
-    background-position: center;
-    image-rendering: pixelated;
-
-    width: 5vh;
-    height: 5vh;
-}
-
-#updateIMG01 {
-    background-image: url(packages/oldicon01.png);
-}
-
-#updateIMG02 {
-    background-image: url(packages/gifs/56d4a0d9.gif);
-}
-
-#updateIMG03 {
-    background-image: url(packages/keyboard-1.png);
-}
-
-.data-update {
-    /*background-color: darkkhaki;*/
-
-    font-size: 2vh;
-    font-family: 'DigitalDiscoThin';
-
+body{
+    background-color: antiquewhite;
+    background-image: url(osr/packages/back01.jpg);
+    background-repeat: no-repeat;
 
     width: 100%;
     height: 100%;
 }
 
-.bordadiv {
-    background-color: #000000cb;
+.lente {
+    z-index: 6;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 
-    margin: 0 auto;
-    display: flex;
+.walkingpath{
+    position: relative; /* Adicionado! */
+    
+    width: 100%;
+    height: 100px;
+}
 
+.walking{
+    border: none;
+    width: 100px;
+    height: 100px;
+    
+    position: fixed;
+    bottom: 0;
+    right: -100px; /* Começa fora da tela */
+    background-image: url(/osr/packages/gifs/5.gif);
+    transform: translateX(-50%);
+    animation: mover 15s linear infinite;
+}
 
-    width: 23vh;
-    height: 23vh;
+@keyframes mover {
+    0% {
+        right: -100px;
+    }
+    
+    100%{
+        right: 100%;
+    }
+}
+
+.bdimag{
+
+    width: 130vh;
+    height: 130vh;
+    margin: auto;
+
+    border: 15px solid transparent;
+    border-image: url(osr/packages/blacklace.png) 17 round;
 
 }
 
-.realeva {
+.glob {
+    z-index: 1;
+    background-image: url(osr/packages/back01.jpg);
+    position: absolute; /* Adicionado! */
+    display: flex;
+    width: 100%;
+    height: 140vh;
+}
 
-    background-size: cover;
-    image-rendering: pixelated;
+.cl{
+    position: fixed;
+    z-index: -50;
+    transform: translateX(-50%);
+}
+
+.cloud01{
+    background-image: url(osr/packages/CL6.png);
+    width: 70vh;
+    height: 55vh;
+    
+
+    margin-top: -10vh;
+
+    animation: cloud 80s linear infinite; 
+}
+
+.cloud02{
+    background-image: url(osr/packages/CL1.png);
+    width: 100vh;
+    height: 45vh;
+
+    margin-top: 20vh;
+    
+
+    animation: cloud 50s linear infinite; 
+}
+
+.cloud03{
+    background-image: url(osr/packages/CL7.png);
+    width: 100vh;
+    height: 45vh;
+    
+    margin-top: 70vh;
+    animation: cloud 100s linear infinite; 
+}
+
+.cloud04{
+    background-image: url(osr/packages/CL3.png);
+    width: 120vh;
+    height: 45vh;
+ 
+    animation: cloud 50s linear infinite; 
+}
+
+@keyframes cloud {
+    0% {
+        right: -1000px;
+    }
+    
+    100%{
+        right: 100%;
+    }
+}
+
+.all{
+    background-color: #0000008a;
+    display: grid;
+    border: dashed white 1.5px;
+
+
+    /*background: #fff radial-gradient(var(--clr-bg) 0px, var(--clr-bg) 7px, transparent 7px);
+*/
+
+
+
+    margin:  auto;
+    width: 130vh;
+    height: 130vh;
+}
+
+.top{
+    background-color: cornflowerblue;
+    background-image: url(osr/packages/bannertox.png);
+    
+    margin: auto;
+    height: 25vh;
+    width: 125vh;
+}
+
+.middle {
+    display: grid;
+    grid-template-columns: 28vh 70vh 28vh;
+    justify-content:space-around;
+    
+    width: 130vh;
+    height: 100vh;
+}
+
+.middle section{
+    width: 100%;
+    height: 100%;
+}
+
+
+.left{
+    background-color: rgba(0, 0, 0, 0.466);
+    border: 1px dashed white;
+
+    display: grid;
+    grid-template-rows: 50% 40% 10%;
+    
+    grid: 1;
+}
+
+.iconframe {
+    /*background-image: url(osr/packages/galery/sech2.jpg);*/
+
+    display: grid;
+    grid-template-rows: 50% 40%;
+    
+    width: 100%;
+    height: 100%;
+}
+
+.icon{
+    background-image: url(osr/packages/icontx.png);
 
     margin: auto;
-    display: flex;
-
-
     width: 20vh;
     height: 20vh;
 }
 
-.outleft {
+
+.chatt{
     display: grid;
-    grid-template-rows: 7% 93%;
-    margin: 4vh 0;
-    float: right;
-    padding: 4px;
-
-    border: 1.5px dashed #fff;
-    /* background-color: tomato; */
-    width: 85%;
-    height: 80vh;
-}
-
-.outleft p {
-    margin: 0;
+    grid-template-rows: 10% 80% 10%;
     width: 100%;
     height: 100%;
-
-    background-color: rgba(20, 20, 22, 0.534);
-    color: white;
-    font-family: 'OwreKynge';
-    font-size: 5vh;
 }
 
-.outleft iframe {
-    margin: 0;
+.divbl01{
+    background-image: url(osr/packages/line-stad02.jpg);
+    margin: 0.5vh 0;
+    height: 70%;
+}
 
+.chatt iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.socialmedia{
 
     width: 100%;
     height: 100%;
 }
 
+.socialmedia button {
+    background-color: black;
+    border: 5px solid black;
+    margin: 2vh 0px;
+    width: 5vh;
+    height: 5vh;
+}
+
+.social-instagram{
+    background-image: url(osr/packages/InstagramIcon.png);
+    margin: 10px;
+}
+
+.social-steam{
+    background-image: url(osr/packages/SteamIcon.png);
+}
+
+.social-github{
+    background-image: url(osr/packages/GithubIcon.png);
+}
+
+.social-spotify{
+    background-image: url(osr/packages/SpotifyIcon.png);
+}
+
+.social-neocities{
+    background-image: url(osr/packages/NeocitiesIcon.png);
+}
 
 
-/*                       COMPONENTES DO RIGHT                      */
+.rndic {
+    /*background-color: yellow;*/
+    display: flexbox;
+    justify-content: space-around;
 
+    justify-content:space-between;
 
-.outright {
-    /*background-color:hotpink;*/
+    background-color:;
 
+    width: 100%;
+    height: 100%;
+}
+
+.rn{
+    display: flex;
+    float: inline-start;
+    margin: 0.5vh;
+}
+
+.tgf01 {
+    background-image: url(osr/packages/FE9pJK1.png);
     float: left;
-    margin: 15vh 0 0 0;
-
-    width: 30vh;
-    height: 128vh;
+    width: 100px;
+    height: 18px;
 }
+
+.tgf02 {
+    background-image: url(osr/packages/ZzlTOGO.png);
+    float: right;
+    width: 100px;
+    height: 18px;
+}
+
+.tgf03 {
+    background-image: url(osr/packages/gifs/toxic.gif);
+    width: 50px;
+    height: 20px;
+}
+
+.tgf04 {
+    background-image: url(osr/packages/gifs/image13.gif);
+    margin: auto;
+    float: none;
+    background-color: #fff;
+    border: #fff 5px solid;
+
+    width: 150px;
+    height: 30px;
+}
+
+.tgf05 {
+    background-image: url(osr/packages/cm.png);
+    width: 20px;
+    height: 20px;
+}
+
+.tgf06 {
+    background-image: url(osr/packages/lonely99.gif);
+    width: 80px;
+    height: 15px;
+}
+
+.tgf07 {
+    background-image: url(osr/packages/GgsJQUx.png);
+    float: left;
+    width: 100px;
+    height: 18px;
+}
+
+.tgf08 {
+    background-image: url(osr/packages/OPFWPxg.png);
+    float: right;
+    width: 100px;
+    height: 18px;
+}
+
+.tgf09 {
+    background-image: url(osr/packages/gifs/mp3love.gif);
+
+    width: 111px;
+    height: 20px;
+}
+
+.tgf10{
+    background-image: url(osr/packages/gifs/5s8x1a.gif);
+    width: 70px;
+    height: 20px;
+}
+
+.tgf11{
+    background-image: url(osr/packages/gifs/6v2ges.gif);
+    width: 111px;
+    height: 20px;    
+}
+
+.mtags {
+    /*background-color: blue;*/
+    width: 100%;
+    height: 100%;
+}
+
+.center{
+    background-color: rgba(255, 255, 255, 0.247);
+    border: 1px dashed white;
+    
+    grid: 2;
+}
+
+.center-01{
+    background-color: rgb(70, 70, 70);
+    height: 8vh;
+    width: 70vh;
+    
+    justify-items:space-around;
+    
+}
+
+.center-01 button {
+    border-radius: 4px;
+    background: linear-gradient(180deg, rgb(17, 17, 17) 0%, rgb(65, 65, 65) 45%, rgb(46, 46, 46) 47%, rgb(0, 0, 0) 100%);
+    border: solid 2px gray;
+    filter: drop-shadow(0 0.5px 0 gray) drop-shadow(0 0.5px 0 gray) drop-shadow(0 0.5px 0.5px gray) drop-shadow(0.5px 0.5px 1px gray) drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0 black);
+    
+    margin: 1vh 0.5vh;
+    margin-left: 1vh;
+
+    width: 12vh;
+    height: 6vh;
+    
+    color: #fff;
+    font-family: 'OwreKynge';
+    font-size: 3vh;
+}
+
+.right{
+    background-color: rgba(0, 0, 0, 0.795);
+    border: 1px dashed white;
+    display: grid;
+    grid-template-rows: 50vh 35vh 15vh;
+    
+    grid: 3;
+}
+
+.blinklst{
+
+    display: flexbox;
+    behavior: alternative;
+}
+
+.blinklst div {
+    margin: 0.5vh auto;
+    width: 200px;
+    height: 25px;
+}
+
+.bl01{
+    background-image: url(osr/packages/gifs/depression.gif);
+}
+
+.bl02{
+    background-image: url(osr/packages/gifs/QyRdafW.gif);
+}
+
+.bl04{
+    background-image: url(osr/packages/gifs/1564181t14241bxnn.gif);
+}
+
+.bl05{
+    background-image: url(osr/packages/gifs/sinnerBLINK.gif);
+}
+
+.bl06{
+    background-image: url(osr/packages/gifs/WVOARo0.gif);
+}
+
+.bl07{
+    background-image: url(osr/packages/gifs/cmnd.gif);
+}
+
+.bl08{
+    background-image: url(osr/packages/gifs/antisocial.gif);
+}
+
+.bl09{
+    background-image: url(osr/packages/gifs/anotherplanetshell.gif);
+}
+
+
+
+.bl10{
+    background-image: url(osr/packages/gifs/urteeth.gif);
+}
+
+.bl11{
+    background-image: url(osr/packages/gifs/tumblr_oy9agy2FGN1tganp7o2_250.gif);
+}
+
+.bl12{
+    background-image: url(osr/packages/gifs/emomusicfan.gif);
+}
+
+
+.bl16{
+    background-image: url(osr/packages/gifs/a67.gif);
+}
+
+.bl18{
+    background-image: url(osr/packages/gifs/e24.gif);
+}
+
+.btns{
+}
+
+.btnslist{
+
+    border: 10px solid transparent;
+    border-image: url(osr/packages/whitelace.png) 17 round;
+    display: flex;
+    margin: 2vh auto;
+    width: 80%;
+    height: 60%;
+}
+
+.btnslist div {
+    display: inline-block;
+    margin: 1vh auto;
+    width: 100px;
+    height: 55px;
+}
+
+.btn02{
+    background-image: url(osr/packages/gifs/e02.png);
+}
+
+.btn03{
+    background-image: url(osr/packages/gifs/e03.webp);
+}
+
+.btn04{
+    background-image: url(osr/packages/gifs/e04.gif);
+}
+
+.btn05{
+    background-image: url(osr/packages/gifs/e05.png);
+}
+
+.btn06{
+    background-image: url(osr/packages/gifs/e06.gif);
+}
+
+
+
+.btn07{
+    background-image: url(osr/packages/gifs/e07.png);
+}
+
+.btn08{
+    background-image: url(osr/packages/gifs/e08.gif);
+}
+
+.btn09{
+    background-image: url(osr/packages/gifs/e09.gif);
+}
+
+.btn10{
+    background-image: url(osr/packages/gifs/e10.gif);
+}
+
+.btn11{
+    background-image: url(osr/packages/gifs/e11.gif);
+}
+
+.btn12{
+    background-image: url(osr/packages/gifs/e012.png);
+}
+
+
+
+
+
+.btn013{
+    background-image: url(osr/packages/gifs/tumblr_22d0bfdd4731324f347e3b95c9ab3a59_1615becb_100.png);
+}
+
+.btn14{
+    background-image: url(osr/packages/gifs/tumblr_70d365ea84b9d813401e39a80a724c43_8ce66ebe_100.png);
+}
+
+.btn15{
+    background-image: url(osr/packages/gifs/tumblr_f1140202ce16715ae0d60437068bb0cd_265ba85d_100.webp);
+}
+
+.btn16{
+    background-image: url(osr/packages/gifs/tumblr_79b8f21b02e5a2988315da1d55e1f9e7_2be2e08f_100.png);
+}
+
+.btn17{
+    background-image: url(osr/packages/gifs/vUAjED8.png);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /*                       PLAYER DISPLAY                      */
 
 .wrapper {
     display: grid 5vh 20vh 4vh 5vh;
-    width: 30vh;
+    width: 28vh;
     height: 40vh;
-
-    border: dashed 1.5px #fff;
 
     color: #fff;
 }
@@ -301,7 +582,8 @@ body {
 .slider_containertop {
     /*background-color: #9a1d86;*/
     display: grid;
-    grid-template-columns: 5vh 35vh;
+    grid-template-columns: 8vh 20vh;
+
 
     height: 5vh;
     width: 30vh;
@@ -309,7 +591,7 @@ body {
 
 .slider_containertop input {
     margin: auto 0;
-    width: 70%;
+    width: 100%;
     display: flex;
     float: right;
 }
@@ -320,16 +602,17 @@ body {
     margin: 1vh;
     width: 3vh;
     height: 3vh;
+    margin: auto;
 
-    background-image: url(packages/audioicon.png);
+    background-image: url(osr/packages/audioicon.png);
     background-size: cover;
     image-rendering: pixelated;
 }
 
 .track-art {
 
-    width: 20vh;
-    height: 20vh;
+    width: 15vh;
+    height: 15vh;
     border: 2px solid #FFFAFA;
     background-size: cover;
     background-position: center;
@@ -347,7 +630,7 @@ body {
     display: flex;
     justify-content: space-around;
 
-    width: 30vh;
+    width: 28vh;
     height: 10vh;
 
 }
@@ -355,12 +638,12 @@ body {
 .buttons div {
     background-color: transparent;
     margin: auto;
-    width: 5vh;
-    height: 5vh;
+    width: 3vh;
+    height: 3vh;
 }
 
 .prev-track div {
-    background-image: url(packages/previcon.png);
+    background-image: url(osr/packages/previcon.png);
     background-size: cover;
     image-rendering: pixelated;
     width: 100%;
@@ -368,7 +651,7 @@ body {
 }
 
 .pause {
-    background-image: url(packages/pauseicon.png);
+    background-image: url(osr/packages/pauseicon.png);
     background-size: cover;
     image-rendering: pixelated;
 
@@ -377,7 +660,7 @@ body {
 }
 
 .play {
-    background-image: url(packages/playicon.png);
+    background-image: url(osr/packages/playicon.png);
     background-size: cover;
     image-rendering: pixelated;
     width: 100%;
@@ -385,7 +668,7 @@ body {
 }
 
 .next-track div {
-    background-image: url(packages/nexticon.png);
+    background-image: url(osr/packages/nexticon.png);
     background-size: cover;
     image-rendering: pixelated;
     width: 100%;
@@ -412,7 +695,7 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-image: url(packages/gifs/core.gif);
+    background-image: url(osr/packages/gifs/core.gif);
     background-size: cover;
     image-rendering: pixelated;
     width: 20px;
@@ -427,1014 +710,5 @@ body {
 }
 
 .volume_slider {
-    width: 90%;
-}
-
-
-
-/*                       LISTA DAS MÚSICAS                      */
-
-
-
-.music-list {
-    /*background-color: darkcyan;*/
-    background-image: url(packages/photoback02.jpeg);
-    background-position: center;
-    background-size: cover;
-    display: grid;
-    grid-template-rows: 30vh 30vh;
-
-    margin: 3vh 0;
-    width: 100%;
-    height: 60vh;
-}
-
-.webbutton{
-    background-color: #000000cb;
-
-    display: grid;
-    grid-template-rows: 40% 60%;
-    width: 100%;
-    height: 30vh;
-}
-
-
-.mybutton{
-    
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    font-family: 'DigitalDisco';
-    color: #fff;
-}
-
-
-.webbutton img {
-    margin: auto;
-    width: 88px;
-    height: 31px;
-}
-
-.webbutton textarea{
-    background-color: #000;
-    color: #fff;
-    resize: none;
-    margin: 2vh;
-    width: 100%;
-    height: 100%;
-    margin: auto;
-}
-
-.lawliet{
-    background-color: #000000cb;
-    align-content: center;
-    width: 100%;
-    height: 100%;
-}
-
-.lawliet img {
-    image-rendering: pixelated;
-    margin: 10%;
-    width: 25vh;
-    height: 25vh;
-}
-
-.music-roll {
-    /*background-color: goldenrod;*/
-    display: flex;
-
-    width: 100%;
-    height: 35vh;
-}
-
-.divdot1 {
-    /*background-color: azure;*/
-    display: flexbox;
-    padding: 1vh 0vh 0vh 1vh;
-    width: 100%;
-    height: 100%;
-}
-
-/*                            COMPONENTES CENTRAIS                           */
-
-.top {
-    background-color: red;
-    background: url(packages/bannertic-01.png);
-    background-size: cover;
-    image-rendering: pixelated;
-
-    display: block;
-    float: none;
-    margin: auto;
-
-    width: 100%;
-    height: 28vh;
-}
-
-.bottom {
-    /*background-color:crimson;*/
-    display: grid;
-    grid-template-columns: 30% 70%;
-
-    margin: 2vh 0 0 0;
-    width: 100%;
-    height: 100%;
-}
-
-.visdiv02 {
-    /*background-color:fuchsia;*/
-    background-image: url(packages/visdiv02.png);
-    background-repeat: repeat-x;
-    background-size: contain;
-    BACKGROUND-POSITION: CENTER;
-
-    display: flex;
-    float: none;
-
-    width: 100%;
-    height: 4vh;
-
-    margin-top: 2vh;
-}
-
-.footer {
-    background-color: transparent;
-    display: flex;
-    float: none;
-
-    width: 100%;
-    height: 20%;
-
-    margin-bottom: 5vh;
-}
-
-.profile {
-    /*background-color: #011826;*/
-    border: dashed #fff 1.5px;
-
-    display: flex;
-    float: left;
-
-    margin: auto;
-    width: 95%;
-    height: 100%;
-}
-
-
-.bio {
-    /*background-color: darkorange;*/
-    display: flex;
-    grid-column: 3;
-
-    padding: 1vh;
-    margin: 0 auto;
-    margin-top: 10%;
-
-    width: 90%;
-    height: 35%;
-
-    font-family: 'DigitalDiscoThin';
-    text-align: center;
-    color: #fff;
-}
-
-.bioimages {
-    /*background-color: orange;*/
-
-    width: 100%;
-    height: 110%;
-}
-
-.bioimages div {
-    background-size: cover;
-    image-rendering: pixelated;
-    margin: 0.5vh 0;
-    width: 100%;
-    height: 4.1vh;
-}
-
-.bimg1 {
-    background-image: url(packages/gifs/tumblr_oy9agy2FGN1tganp7o2_250.gif);
-}
-
-.bimg2 {
-    background-image: url(packages/gifs/blinky8.gif);
-}
-
-.bimg3 {
-    background-image: url(packages/gifs/tumblr_6d12a2374206fe6e8fde0798e3e32894_fa1336eb_250.webp);
-}
-
-.bimg4 {
-    background-image: url(packages/gifs/d4041c92_original.gif);
-}
-
-.bimg5 {
-    background-image: url(packages/gifs/depression.gif);
-}
-
-.bimg6 {
-    background-image: url(packages/gifs/emomusicfan.gif);
-}
-
-.bimg7 {
-    background-image: url(packages/gifs/1564181t14241bxnn.gif);
-}
-
-.bimg8 {
-    background-image: url(packages/gifs/QyRdafW.gif);
-}
-
-.bimg9 {
-    background-image: url(packages/gifs/sinnerBLINK.gif);
-}
-
-.bimg10 {
-    background-image: url(packages/gifs/y14.gif);
-}
-
-.bimg11 {
-    background-image: url(packages/gifs/WVOARo0.gif);
-}
-
-.socialmedia {
-    background-color: darkred;
-    margin: 0 auto;
-    margin-top: 10%;
-    width: 90%;
-    height: 30vh;
-}
-
-.social-instagram {
-    background-color: pink;
-    display: flex;
-
-    width: 100%;
-    height: 20%
-}
-
-#sociallink a {
-
-    background-size: cover;
-    image-rendering: pixelated;
-    display: flex;
-    border: none;
-
-    margin: auto 2vh;
-    width: 4vh;
-    height: 4vh;
-}
-
-.social-instagram {
-    background: linear-gradient(180deg, rgb(255, 43, 15) 0%, rgb(255, 23, 92) 45%, rgb(138, 0, 119) 47%, rgb(133, 0, 138) 60%, rgb(84, 0, 153) 100%);
-
-    border: dashed 1.5px rgb(255, 255, 255);
-}
-
-.social-instagram:hover {
-    filter: brightness(1.5);
-    transition: 0.5s;
-}
-
-.social-instagram:active {
-    box-shadow: rgba(15, 15, 29, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.61) 0px 18px 36px -18px inset;
-}
-
-.social-instagram a {
-    background-image: url(packages/InstagramIcon.png);
-
-}
-
-.social-steam {
-    background: linear-gradient(180deg, #0B5B8E 0%, #002b6b 45%, rgb(14, 23, 44) 47%, #06152D 60%, rgb(0, 10, 43) 100%);
-
-    border: dashed 1.5px rgb(255, 255, 255);
-}
-
-.social-steam:hover {
-    filter: brightness(1.5);
-    transition: 0.5s;
-}
-
-.social-steam:active {
-    box-shadow: rgba(15, 15, 29, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.61) 0px 18px 36px -18px inset;
-}
-
-.social-steam a {
-    background-image: url(packages/SteamIcon.png);
-}
-
-.social-github {
-    background: linear-gradient(180deg, #1a1f22 0%, #0b1016 45%, rgb(0, 0, 0) 47%, #080a0c 60%, rgb(0, 1, 3) 100%);
-
-    border: dashed 1.5px rgb(255, 255, 255);
-}
-
-.social-github:hover {
-    filter: brightness(1.5);
-    transition: 0.5s;
-}
-
-.social-github:active {
-    box-shadow: rgba(15, 15, 29, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.61) 0px 18px 36px -18px inset;
-}
-
-.social-github a {
-    background-image: url(packages/GithubIcon.png);
-}
-
-.social-spotify {
-    background: linear-gradient(180deg, #00b941 0%, #006b3e 45%, rgb(6, 56, 29) 47%, #004117 60%, rgb(0, 43, 27) 100%);
-
-    border: dashed 1.5px rgb(255, 255, 255);
-}
-
-.social-spotify:hover {
-    filter: brightness(1.5);
-    transition: 0.5s;
-}
-
-.social-spotify:active {
-    box-shadow: rgba(15, 15, 29, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.61) 0px 18px 36px -18px inset;
-}
-
-.social-spotify a {
-    background-image: url(packages/SpotifyIcon.png)
-}
-
-.social-neocities {
-    background: linear-gradient(180deg, #c98b2e 0%, #ce551e 45%, rgb(189, 43, 38) 47%, #d42525 60%, rgb(216, 35, 22) 100%);
-
-    border: dashed 1.5px rgb(255, 255, 255);
-}
-
-.social-neocities:hover {
-    filter: brightness(1.5);
-    transition: 0.5s;
-}
-
-.social-neocities:active {
-    box-shadow: rgba(15, 15, 29, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.61) 0px 18px 36px -18px inset;
-}
-
-.social-neocities a {
-    background-image: url(packages/NeocitiesIcon.png);
-}
-
-#sociallink p {
-    color: #ffffff;
-    display: flex;
-    margin: auto;
-
-    font-family: 'GrapeSoda';
-    font-size: 180%;
-}
-
-
-.social-steam {
-    /*background-color:royalblue;*/
-    display: flex;
-
-    width: 100%;
-    height: 20%
-}
-
-.social-github {
-    /*background-color:teal;*/
-    display: flex;
-
-    width: 100%;
-    height: 20%
-}
-
-.social-spotify {
-    /*background-color:lawngreen;*/
-    display: flex;
-
-    width: 100%;
-    height: 20%
-}
-
-.social-neocities {
-    /*background-color: yellow;*/
-    display: flex;
-
-    width: 100%;
-    height: 20%
-}
-
-.backimg {
-    /*background-color: blue;*/
-    background-image: url(packages/galery/sech2.jpg);
-    background-size: cover;
-    background-position: center;
-
-    margin: 1vh;
-    width: 100%;
-    height: 30%;
-}
-
-.framephoto {
-    background-image: url(packages/gifphotoback.gif);
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    width: 24vh;
-    height: 24vh;
-    margin: auto;
-    margin-top: 60%;
-
-}
-
-.photo {
-    background-image: url(packages/1736908485428.jpg);
-    background-size: cover;
-    background-position: center;
-    image-rendering: crisp-edges;
-
-    margin: auto;
-    width: 20vh;
-    height: 20vh;
-
-}
-
-.photoframe {
-    background-image: url(packages/photoframe.png);
-    background-size: 120%;
-    background-position: center;
-    display: none;
-
-    width: 100%;
-    height: 100%;
-}
-
-.hall {
-    /*background-color:darkmagenta;*/
-    display: grid;
-    grid-template-rows: 5% 95%;
-
-    width: 100%;
-    height: 100%;
-}
-
-.corpo {
-    /*background-color:chocolate;*/
-    border: dashed #fff 1.5px;
-
-    display: grid;
-    grid-template-rows: 5vh 85% 2vh 10%;
-
-    float: right;
-
-    padding: 1vh;
-
-    margin: 0 auto;
-    width: 95%;
-    height: 99%;
-}
-
-.desc {
-    background-color: black;
-    margin-bottom: 5vh;
-    width: 100%;
-    height: 100%;
-}
-
-.homedesc p {
-    font-family: 'HeinzHeinrich';
-    font-size: 2vh;
-    color: white;
-    margin: -2vh 1vh;
-}
-
-.home {
-    /*background-color: chartreuse;*/
-    border: none;
-
-
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-}
-
-.visdiv01 {
-    background-image: url(packages/gifs/visdiv01.gif);
-    background-repeat: repeat-x;
-    width: 100%;
-    height: 100%;
-}
-
-.subhome {
-    /*background-color: midnightblue;*/
-    display: flex;
-
-    margin: auto;
-    width: 100%;
-    height: 100%;
-}
-
-.otherbutton {
-    display: flex;
-    margin: auto;
-
-    justify-content: space-around;
-    width: 100%;
-    height: 10vh;
-}
-
-.otherbutton img {
-    width: 12vh;
-    height: 7vh;
-}
-
-.buttonsiframe {
-    /*background-color:mediumseagreen;*/
-
-    display: flex;
-    float: right;
-
-    justify-content: space-around;
-    align-items: center;
-
-    width: 100%;
-    height: 100%;
-}
-
-.buttonsiframe button {
-    /*background-color:blueviolet;*/
-
-    border: none;
-
-    border-radius: 4px;
-    background: linear-gradient(180deg, rgb(17, 17, 17) 0%, rgb(65, 65, 65) 45%, rgb(46, 46, 46) 47%, rgb(0, 0, 0) 100%);
-    padding-left: 5px;
-    border: solid 2px gray;
-    filter: drop-shadow(0 0.5px 0 gray) drop-shadow(0 0.5px 0 gray) drop-shadow(0 0.5px 0.5px gray) drop-shadow(0.5px 0.5px 1px gray) drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0 black);
-
-    width: 19%;
-    height: 80%;
-
-    color: #fff;
-    font-family: 'OwreKynge';
-    font-size: 3vh;
-}
-
-iframe {}
-
-.br{
-    display: none;
-}
-
-
-/*                              AJUSTANDO TELA PARA CELULARES                          */
-
-@media screen and (max-width: 1475px) {
-
-.all{
-    background-color: transparent;
-
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
-
-    justify-content: space-between;
-
-
-    width: 100%;
-    height: 90%;
-
-    margin: 5vh auto;
-}
-
-.left{
-    margin: 0;
-}
-
-.center{
-    margin: 0;
-}
-
-.right{ 
-    margin: 0;
-}
-
-
-}
-
-
-
-@media screen and (max-width: 1360px) {
-    .all {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        /*duas colunas iguais*/
-        grid-template-rows: auto auto;
-    }
-
-    .footer {
-        margin-top: 150vh;
-    }
-
-    .center {
-        grid-column: 1 / span 2;
-        /*ocupando as duas colunas*/
-        justify-self: center;
-        width: 100%;
-
-        margin: 0 0 5vh 0;
-    }
-
-    .left,
-    .right {
-        display: flex;
-        margin: 0;
-        width: 100%;
-        height: 80vh;
-        order: 2;
-    }
-
-    .right {
-        grid-column: 2;
-
-        width: 100%;
-    }
-
-    .outleft,
-    .outright {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-
-
-    }
-
-    .left {
-        grid-column: 1;
-
-        width: 100%;
-
-        display: flex;
-        margin: auto;
-        margin-top: 38vh;
-        background-color: #000000e7;
-        border: dashed white 1px;
-    }
-
-    .right {
-        display: flex;
-        margin: auto;
-        margin-top: 38vh;
-    }
-
-    .outright {
-        display: grid;
-        grid-template-rows: 35% 45% 20%;
-    }
-
-    .left div,
-    .outright div {
-        border: none;
-    }
-
-    .bordadiv {
-        display: none;
-    }
-
-    .last-update {
-        height: 100%;
-    }
-
-    .list-update {
-        background-color: rgba(37, 37, 37, 0.24);
-    }
-
-    .music-list {
-        display: none;
-    }
-
-    .player {
-        margin: auto;
-    }
-
-    .music-roll {
-        margin: 15vh auto;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .home {
-        width: 100%;
-    }
-
-    .hall {
-        width: 100%;
-    }
-
-}
-
-@media screen and (max-width: 767px) {
-    * {
-        margin: 0;
-    }
-    
-    body {
-        width: 100%;
-    }
-    
-    .all {
-        margin: 0;
-        width: 100%;
-        height: 100%;
-
-        grid-template-columns: 100%;
-        grid-template-rows: 200vh 85vh 80vh;
-    }
-
-    .top {
-        background-image: url(packages/mobilebanner.png);
-        width: 100%;
-        background-position:center;
-    }
-
-    .bottom {
-        grid-template-rows: 30% 70%;
-        grid-template-columns: 100%;
-    }
-
-    .profile {
-        display: flex;
-        justify-content: space-around;
-        grid-template-rows: 0;
-    }
-
-    .backimg {
-        display: grid;
-        grid-template-columns: 50% 50%;
-
-        width: 100%;
-        height: 95%;
-    }
-
-    .portable {
-        background-color: #000000af;
-        width: 100%;
-        font-size: 1.5vh;
-    }
-
-    .bio {
-        text-shadow: -2px 6px 21px rgba(0, 0, 0, 1);
-        margin: auto;
-        width: 80%;
-        height: 16vh;
-    }
-
-    .framephoto {
-        width: 100%;
-        margin:  auto;
-        display: flex;
-    }
-
-    .photo {
-        display: flex;
-        margin: auto;
-    }
-
-    .bioimages {
-        background-color: #000000af;
-        margin: auto;
-        align-content:space-between;
-        float: right;
-        width: 100%;
-        height: 100%;
-    }
-
-    .bioimages div {
-        background-position: center;
-        width: 100%;
-        height: 7%;
-    }
-
-    .socialmedia {
-        display: none;
-        margin: 0;
-        float: right;
-        width: 8vh;
-        height: 100%;
-    }
-
-    #sociallink {
-        display: flex;
-        float: right;
-    }
-
-    #sociallink a {
-        margin: auto;
-    }
-
-    #sociallink p {
-        display: none;
-    }
-
-    .buttonsiframe {
-        /*background-color:mediumseagreen;*/
-    
-        display: flex;
-        float: none;
-
-        display: grid;
-        grid-template-columns: 15% 15% 15% 15% 15%;
-    
-        justify-content: space-around;
-        align-items: center;
-
-        width: 100%;
-        height: 100%;
-        display: flex;
-    }
-    
-    .buttonsiframe button {
-        /*background-color:blueviolet;*/
-    
-        border: none;
-    
-        border-radius: 0px;
-        background: linear-gradient(180deg, rgb(17, 17, 17) 0%, rgb(65, 65, 65) 45%, rgb(46, 46, 46) 47%, rgb(0, 0, 0) 100%);
-        padding-left: 0px;
-        border: solid 2px gray;
-        filter: drop-shadow(0 0.5px 0 gray) drop-shadow(0 0.5px 0 gray) drop-shadow(0 0.5px 0.5px gray) drop-shadow(0.5px 0.5px 1px gray) drop-shadow(-0.5px 0.5px 0 black) drop-shadow(0 0.5px 0 black) drop-shadow(0 0.5px 0 black);
-    
-        width: 100%;
-        height: 100%;
-    
-        color: #fff;
-        font-family: 'OwreKynge';
-        font-size: 20px;
-    }
-
-    .hall {
-        width: 100%;
-        grid-template-rows: 8% 90%;
-    }
-
-    .home {
-        width: 100%;
-        margin: 0;
-    }
-
-    .visualdiv01 {
-        display: none;
-    }
-
-    .subhome {
-        background-color: #000000e5;
-        border: dashed 1px white;
-        display: block;
-        margin: 2vh 0;
-
-        width: 100%;
-        height: 20vh;
-    }
-
-    .otherbutton{
-        display: block;
-        width: 100%;
-        height: 100%;
-        justify-content: space-around;
-    }
-    
-    .otherbutton img {
-        width: 32%;
-        height: 50%;
-        margin: auto;
-        justify-self: center;
-    }
-
-    .outleft {
-        display: flex;
-    }
-
-    .outright {
-        background-color: #000000cc;
-        display: grid;
-        grid-template-columns: 0;
-        grid-template-rows: 70% 30%;
-        grid-template-columns: 70% 30%;
-    }
-
-    .left {
-        order:  3;
-        width: 100%;
-        display: grid;
-        padding: 0;
-        margin: 0;
-        grid-template-columns: 50% 50%;
-    }
-
-    .right{
-        grid-column: 1;
-        order: 2;
-        width: 100%;
-        display: block;
-        padding: 0;
-        margin: 0;
-        float: none;
-    }
-
-    .last-update {
-        display: grid;
-        grid-template-rows: 10% 90%;
-        margin: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    .list-update{
-        overflow: hidden;
-        height: 100%;
-    }
-
-    .up-update{
-        margin: 2% 0;
-    }
-
-    .title-update{
-        display: flex;
-        width: 100%;
-    }
-
-    .outleft {
-        display: grid;
-        grid-template-rows: 8% 92%;
-        margin: 0;
-        padding: 0;
-
-        width: 100%;
-        height: 100%;
-
-    }
-
-    .outleft p {
-        background-color: #151418c5;
-        font-family: 'DigitalDiscoThin';
-        padding: 1vh;
-        color: #ffffff;
-    }
-    
-    .player{
-        display: block;
-
-    }
-    
-    .music-list{
-        display: flex;
-        margin: 0;
-        width: 100%;
-        height: 80vh;
-    }
-
-    .webbutton{
-        display: none;
-    }
-
-    .lawliet{
-        display: none;
-    }
-
-    .oso{
-        display: block;
-        width: 100%;
-
-        grid-template-columns: 0;
-        grid-template-rows: 20% 20% 20% 20% 20%;
-    }
-
-    #sociallink {
-        display: block;
-    }
-
-    #sociallink a {
-        display: block;
-    }
-
-    #sociallink p {
-    }
-    
-    .music-roll{
-        display:block;
-        margin: 0;
-    }
-
-    .music-roll img {
-        width: 30%;
-        margin: 0;
-    }
-
-    .buttons div {
-        width: 4vh;
-        height: 4vh;
-    }
-
-
-
+    width: 70%;
 }

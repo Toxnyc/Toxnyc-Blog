@@ -1,0 +1,55 @@
+*{
+color: white;
+
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: linear-gradient(#02000a 50%, #6f6e75 50%);
+    background-size: 75% 3px;
+    background-repeat: repeat;
+    opacity: 0.75;
+    z-index: 9999999999999999;
+}
+
+#top_banner {
+    display: none;
+}
+
+#background{
+    background-color: rgb(25, 25, 31);
+    
+    padding-top: 15%;
+}
+
+.recieved{
+    display: none;
+}
+
+.allMessages {
+    background-color: #06060c;
+    margin: 1vh;
+    width: 90%;
+}
+
+.allMessages:hover {
+    border: solid 1px #004da5;
+    box-shadow: 1vh 1vh #000000;
+}
+
+.senderInfo{
+    color:#5f9ebb;
+}
+
+#input{
+    background-color: black;
+    border-radius: 0;
+    color: white;
+
+}
+
+
+#emojiTrayToggle {
+    display: none;
+}

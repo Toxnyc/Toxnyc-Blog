@@ -1,0 +1,643 @@
+* {
+    cursor: url(../packages/gifs/cursor3.gif), auto;
+    min-width: none;
+}
+
+body {
+    background-color: black;
+    margin: auto;
+    padding: 0;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+}
+
+@font-face {
+    font-family: 'Pixel';
+    src: url(../packages/fonts/MinecraftStandard.otf);
+}
+
+@font-face {
+    font-family: 'Heinz';
+    src: url(../packages/fonts/HeinzHeinrich-Regular.otf);
+}
+
+body::before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: calc(100% + 32px);
+    height: calc(100% + 32px);
+    background-image: url(1.png);
+    background-position-x: 0px;
+    background-position-y: 0px;
+    background-repeat: repeat;
+    z-index: 10000000;
+    animation: ScanlineAnimationLeft 2s linear infinite;
+    animation-name: ScanlineAnimationLeft;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    pointer-events: none;
+    opacity: 1;
+}
+
+::-webkit-resizer {
+    width: 16px;
+    height: 16px;
+    background-color: #cccccc;
+    background-image: url(3.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-button {
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    box-shadow: inset 1px 1px 0 0 white, inset -1px -1px 0 0 #868a8e;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #cccccc;
+    image-rendering: pixelated;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #cccccc;
+}
+
+::-webkit-scrollbar-thumb {
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    box-shadow: inset 1px 1px 0 0 white, inset -1px -1px 0 0 #868a8e;
+    width: 10px;
+    height: 10px;
+    background-color: #cccccc;
+    z-index: 1;
+}
+
+::-webkit-scrollbar-track {
+    background-image: url(2.png);
+    image-rendering: pixelated;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.about-content {
+    background-color: black;
+
+    width: 100%;
+    height: 150vh;
+
+}
+
+.about-about {
+    display: flex;
+    margin: 0 0;
+
+    width: 100%;
+    height: 30vh;
+}
+
+.moldura {
+    background-image: url(../packages/mold.png);
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    width: 40vh;
+    height: 25vh;
+}
+
+.moldura p {
+    color: black;
+    margin: auto;
+    font-size: 10vh;
+}
+
+.aboutme-text p {
+    color: white;
+    margin: 2vh;
+    font-family: 'Pixel';
+    font-stretch: ultra-expanded;
+    font-size: 8px;
+}
+
+.divang {
+    background-color: transparent;
+    background-image: url(../packages/divang.png);
+    background-size: 50vh;
+    background-position: center;
+    image-rendering: pixelated;
+    width: 100%;
+    height: 25vh;
+}
+
+.about-desc {
+    font-family: 'Heinz';
+    font-size: 2vh;
+    color: white;
+}
+
+.movie-galery {
+    width: 100%;
+    height: 230px;
+    margin: 5vh auto;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+}
+
+.movie {
+    height: 150px;
+    margin-left: 10vh;
+    padding: 100vh;
+    animation: spin 1.88s linear infinite;
+    perspective: 500px;
+    transition: width 0.5s;
+    position: absolute;
+}
+
+.movie img {
+    transition: transform 0.5s, width 0.5s, height 0.5s, margin-top 0.5s;
+    width: 180px;
+    height: 300px;
+    transform: rotate(0deg) rotateY(15deg);
+    transform-style: preserve-3d;
+    /*object-fit: cover;*/
+}
+
+.movie-galery .movie {
+    all: unset;
+    perspective: 600px;
+    width: 10vh;
+    transition: width 0.5s;
+}
+
+.movie-galery .movie:hover {
+    width: 80vh;
+}
+
+
+.movie-galery .movie:hover img {
+    transform: rotateX(0deg) rotateY(10deg);
+    margin-top: -2px;
+}
+
+
+.hobbies-about {
+    width: 100%;
+    height: 50vh;
+    margin: 10vh 0;
+}
+
+.codhob-about {
+    width: 100%;
+    height: 8vh;
+    color: white;
+    font-family: 'Pixel';
+    font-size: 1vh;
+    text-align: justify;
+}
+
+.hobbies-codding {
+    display: flexbox;
+    width: 100%;
+    height: 40vh;
+}
+
+.hobcod {
+    width: 100%;
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.hopt {
+    display: flexbox;
+    margin: auto;
+    width: 80%;
+    height: 40vh;
+}
+
+.hobbies-pt1 {
+    float: left;
+}
+
+.hobbies-pt2 {
+    float: right;
+}
+
+.hobbies-pt1 div {
+    background-image: url(../packages/codd.png);
+}
+
+.hobbies-pt2 div {
+    background-image: url(../packages/coddd.png);
+}
+
+.hopt div {
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    height: 30vh;
+}
+
+.hopt p {
+    text-align: center;
+    font-family: 'Pixel';
+    color: white;
+    margin: auto;
+    width: 100%;
+    height: 8vh;
+}
+
+.book-about {
+
+    margin: 8vh 0;
+    width: 100%;
+    height: 50vh;
+}
+
+.bookpic {
+
+    background-image: url(../packages/letters.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    float: left;
+    margin-left: 1vh;
+    width: 45%;
+    height: 40vh;
+}
+
+.bookrev {
+
+    grid-template-rows: 5vh 30vh 5vh;
+    display: grid;
+    float: right;
+    margin-right: 1vh;
+    width: 45%;
+    height: 40vh;
+
+    font-family: 'Pixel';
+    font-size: 1vh;
+    color: white;
+}
+
+.bookrev span {
+    display: flex;
+    height: 5vh;
+    text-align: center;
+}
+
+.bookrev p {
+    width: 100%;
+    height: 35vh;
+}
+
+.randompic01 {
+    background-image: url(../packages/gifs/mmimi.gif);
+    background-size: cover;
+    background-position: center;
+    image-rendering: pixelated;
+    display: flexbox;
+    margin-top: -8vh;
+    float: right;
+    width: 15vh;
+    height: 15vh;
+}
+
+
+/*                                         PHOTOS                                        */
+
+.photos-content {
+    width: 100%;
+    height: 100%;
+}
+
+.churse {
+    /*background-color: aquamarine;*/
+    display: flex;
+    width: 100%;
+    height: 40vh;
+}
+
+.chemg {
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    display: table-cell;
+    width: 25vh;
+    height: 35vh;
+}
+
+.chemh {
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    display: table-cell;
+    width: 20vh;
+    height: 30vh;
+}
+
+.chemi {
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    display: table-cell;
+    width: 30vh;
+    height: 20vh;
+}
+
+.churseImg1 {
+    background-image: url(../packages/galery/sech2.jpg);
+}
+
+.churseImg2 {
+    background-image: url(../packages/galery/sech5.jpeg);
+}
+
+.churseImg3 {
+    background-image: url(../packages/galery/sech4.jpeg);
+}
+
+.churseImg4 {
+    background-image: url(../packages/galery/sech1.jpeg);
+}
+
+.churseImg5 {
+    background-image: url(../packages/galery/sech3.jpeg);
+}
+
+.churseImg-About {
+    width: 10vh;
+    height: 40vh;
+}
+
+.churseImg-About p {
+    writing-mode: vertical-lr;
+    margin: 3vh auto;
+
+    font-size: 2.5vh;
+    font-family: 'Heinz';
+    color: white;
+}
+
+.divggalle {
+    width: 100%;
+    height: 10vh;
+    background-image: url(../packages/divggalle.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.ipimg {
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    display: table-cell;
+    width: 25vh;
+    height: 35vh;
+}
+
+.ipiImg-About p {
+    margin: 3vh auto;
+
+    font-size: 2.5vh;
+    font-family: 'Heinz';
+    color: white;
+}
+
+.churseImg6 {
+    background-image: url(../packages/galery/ipmu1.jpg);
+}
+
+.churseImg7 {
+    background-image: url(../packages/galery/ipmu2.jpg);
+}
+
+.churseImg8 {
+    background-image: url(../packages/galery/ipmu3.jpg);
+}
+
+.churseImg9 {
+    background-image: url(../packages/galery/ipmu4.jpg);
+}
+
+.rand {
+    background-image: url(../packages/galery/rand1.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 2vh auto;
+    width: 35vh;
+    height: 45vh;
+}
+
+.churseImg10 {
+    background-image: url(../packages/galery/cemit1.jpg);
+}
+
+.churseImg11 {
+    background-image: url(../packages/galery/rand2.jpeg);
+}
+
+.churseImg12 {
+    background-image: url(../packages/galery/cemit2.jpg);
+}
+
+.churseImg13 {
+    background-image: url(../packages/galery/cptr1.jpg);
+}
+
+.churseImg14 {
+    background-image: url(../packages/galery/cptr2.jpg);
+}
+
+
+/*                                         GALLERY                                        */
+
+.gallery-content {
+
+    width: 100%;
+    height: 80vh;
+
+    font-family: 'Heinz';
+    font-size: 1vh;
+    color: white;
+    text-align: center;
+}
+
+.omgrei {
+    background-image: url(../packages/dr2.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: rgb(78, 0, 0) 0px 20px 30px -10px;
+    margin: 5vh auto;
+    width: 80%;
+    height: 80%;
+}
+
+
+/************************************     LINKS    ************************************************/
+
+.links-about {
+    font-family: 'Pixel';
+    font-size: 1.2vh;
+    text-align: center;
+
+    margin: 3vh;
+    color: white;
+}
+
+.links a,
+.links a:visited {
+    font-family: 'Pixel';
+    text-decoration: none;
+    font-size: 1.5vh;
+    color: white;
+
+    margin: 2vh
+}
+
+.coolsitesIMG {
+    image-rendering: pixelated;
+    width: 100%;
+    height: 15vh;
+
+    margin: 5vh auto;
+}
+
+.linkIMG01 {
+    background-image: url(../packages/bluepictochat.png);
+    background-size: cover;
+    background-position: center;
+    float: left;
+    margin: auto;
+    width: 40vh;
+    height: 15vh;
+}
+
+.linkIMG02 {
+    background-image: url(../packages/gifs/5.gif);
+    background-size: cover;
+    background-position: center;
+    float: right;
+    margin: auto;
+    width: 15vh;
+    height: 15vh;
+}
+
+
+@media screen and (max-width: 666px) {
+
+    .hopt {}
+
+    .ipiImg-About {
+        display: none;
+    }
+
+}
+
+/************************************     BLOG    ************************************************/
+
+.all-blog{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.letter{
+    margin: 3vh auto;
+    width: 95%;
+    height: 25vh;
+    background-color: black;
+    border-right: 5px ridge #ffffff;
+    border-bottom: 5px ridge #ffffff;
+    border-left: 5px ridge #ffffff;
+    display: grid;
+    grid-template-rows: 5vh 20vh;
+}
+
+.letter-title{
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: 25% 75%;
+
+    font-size: 1vh;
+    font-family: 'pixel';
+    color: white;
+    
+}
+
+.letter-title div:nth-child(1){
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(49, 49, 49);
+}
+
+.letter-title div:nth-child(2){
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(22, 22, 22);
+}
+
+.letter-title p {
+    margin:  1vh;
+     
+}
+
+.letter-mensage{
+    font-family: 'Pixel';
+    color: white;
+    font-size: 1vh;
+    margin: auto;
+    width: 95%;
+    height: 100%;
+}
+
+
+.mme1{
+    display: flex;
+    width: 100%;
+    height: 20vh;
+}
+
+.mme1 img:nth-child(1){
+    display: flex;
+    background-color: white;
+    width: 65%;
+    height: 100%;
+}
+
+.mme1 img:nth-child(2){
+    display: flex;
+    background-color: black;
+    width: 34%;
+    height: 99%;
+    margin: auto;
+}
