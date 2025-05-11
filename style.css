@@ -19,8 +19,7 @@ body{
 .lente {
     z-index: 6;
     position: absolute;
-    width: 100%;
-    height: 100%;
+
 }
 
 .walkingpath{
@@ -189,7 +188,8 @@ body{
 }
 
 .icon{
-    background-image: url(osr/packages/icontx.png);
+    background-image: url(osr/packages/icots.jpg);
+    image-rendering:optimizeSpeed;
 
     margin: auto;
     width: 20vh;
@@ -227,6 +227,11 @@ body{
     margin: 2vh 0px;
     width: 5vh;
     height: 5vh;
+}
+
+.socialmedia button:hover{
+    background-color: rgb(19, 19, 19);
+    border: 5px solid rgb(19, 19, 19);
 }
 
 .social-instagram{
@@ -355,13 +360,16 @@ body{
 .center{
     background-color: rgba(255, 255, 255, 0.247);
     border: 1px dashed white;
+
+    display: grid;
+    grid-template-rows: 8% 92%;
     
     grid: 2;
 }
 
 .center-01{
     background-color: rgb(70, 70, 70);
-    height: 8vh;
+    height: 100%;
     width: 70vh;
     
     justify-items:space-around;
@@ -383,6 +391,13 @@ body{
     color: #fff;
     font-family: 'OwreKynge';
     font-size: 3vh;
+}
+
+.center-02 {
+    border: none;
+
+    width: 100%;
+    height: 100%;
 }
 
 .right{
@@ -711,4 +726,103 @@ body{
 
 .volume_slider {
     width: 70%;
+}
+
+
+
+/*                         aaaaaaaaaaaaaaaaaaaa                */
+
+
+@media screen and (max-width: 767px) {
+
+*{
+    background-size: cover;
+
+}
+
+.bdimag{
+    width: 95%;
+    height: 160vh;
+    margin: 0 auto;
+}
+
+.glob{
+    height: 165vh;
+}
+
+.all{
+    grid-template-rows: 20vh 85vh 80vh;
+    grid-template-columns: 100%;
+    display: grid;
+    margin: auto;
+
+    width: 100%;
+    height: 100%
+
+}
+
+.middle{
+    justify-content:;
+    grid-template-rows: 85vh 50vh;
+    grid-template-columns: 30% 70%;
+
+    width: 100%;
+}
+
+.center{
+    margin: auto;
+    width: 100%;
+}
+
+.center-01{
+    width: 100%;
+}
+
+.center-01 button{
+    width: 12vh;
+    margin: 0.2vh 0.2vh;
+}
+
+.top{
+    display: grid;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.left{
+    display: grid;
+    width: 100%;
+}
+
+.right{ 
+    display: flex;
+
+    grid-column: 1 / span 2;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 2vh 0;
+}
+
+.rndic {
+    /*background-color: yellow;*/
+    justify-content:stretch;
+}
+
+.rn{
+    display: flex;
+    float:;
+    margin: 0.1vh;
+}
+
+.tgf04{
+    display: none;
+}
+
+.btnslist{
+    height: 20%;
+}
+
 }

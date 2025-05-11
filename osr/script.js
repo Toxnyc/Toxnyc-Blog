@@ -210,3 +210,18 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 })
+
+
+const buttons = document.querySelectorAll('.center-01 button');
+
+buttons.forEach(button => {
+    button.addEventListener('click', function () {
+        const iframe = document.querySelector('iframe[name="frame"]');
+        
+        
+        const targetPage = button.dataset.src;
+        if (iframe && targetPage) {
+            iframe.src = targetPage;
+        }
+
+    })})
