@@ -1,0 +1,4 @@
+.container{width:280px;height:100px;position:fixed;bottom:0;margin:0;padding:0;right:0;}
+.bot1,.bot{position:absolute;right:0;}
+.main1{width:280px;background:#333333;height:100px;margin:auto;margin-top:25px;position:absolute;}
+.bot1{display:none;font-size:26px}.plus,.minus{padding:0;margin:0;width:24px}

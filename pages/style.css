@@ -1,0 +1,374 @@
+*{
+    background-position: center;
+    background-size: cover;
+    image-rendering: pixelated;
+
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(../osr/packages/back03.jpg);
+}
+
+@font-face {
+    font-family: 'Pixel';
+    src: url(../osr/packages/fonts/MinecraftStandard.otf);
+    font-size: 1px;
+}
+
+@font-face {
+    font-family: 'Heinz';
+    src: url(../osr/packages/fonts/HeinzHeinrich-Regular.otf);
+}
+
+.global{
+    background-color: rgba(0, 0, 0, 0.705);
+    display: grid;
+
+    margin: 0vh;
+    grid-template-rows: 32vh 13vh 5vh 32vh 50vh;
+
+}
+
+.top{
+    background-color: rgba(0, 0, 0, 0.705);
+
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+}
+
+.oeste-me{
+
+    display: grid;
+    grid-template-rows: 20vh 12vh ;
+}
+
+
+
+.norte-me{
+    margin: 1vh;
+    justify-content:space-around;
+
+    display: grid;
+    grid-template-columns: 17vh 30vh;
+}
+
+.mdd-dd01{
+    background-color: aqua;
+    border: 1px dashed white;
+        margin: 1.5vh;
+        background-image: url(../osr/packages/light.jpeg);
+}
+
+
+.left-me{
+
+    margin: 0vh;
+    width: 16vh;
+    height: 16vh;
+}
+
+.icon-mebd{
+
+    border-width: 2.5vh;
+    border-style: solid;
+    border-image: url('../osr/packages/miserabledolly_fishnet2.png') 31 fill round;
+
+    margin: 0vh;
+    width: 13vh;
+    height: 13vh;
+}
+
+.icon-me{
+    background-image: url('../osr/packages/icots.jpg');
+    width: 13vh;
+    height: 13vh;
+}
+
+.right-me{
+    background-color: rgba(255, 255, 255, 0.788);
+    border: dashed 2px black;
+
+    width: 100%;
+    height: 100%;
+}
+
+.right-me p{
+    font-family: 'Pixel';
+    font-size: 1.1vh;
+    margin: 1vh;
+}
+
+.sul-me{
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: 190px 190px;
+    grid-template-rows: 25px 25px 25px;
+
+    margin: 1vh;
+}
+
+.sul-me div{
+
+    display: grid;
+    width: 190px;
+    height: 25px;
+}
+
+.mm-01{
+    background-image: url(../osr/packages/gifs/1564181t14241bxnn.gif);
+}
+
+.mm-02{
+    background-image: url(../osr/packages/gifs/a67.gif);
+}
+
+.mm-03{
+    background-image: url(../osr/packages/gifs/e24.gif);
+}
+
+.mm-04{
+    background-image: url(../osr/packages/gifs/emomusicfan.gif);
+}
+
+.mm-05{
+    background-image: url(../osr/packages/gifs/QyRdafW.gif);
+}
+
+.mm-06{
+    background-image: url(../osr/packages/gifs/y14.gif);
+}
+
+
+
+.leste-me{
+    background-color: rgba(255, 255, 255, 0.726);
+    margin: 1vh;
+        border: dashed 2px white;
+    padding: 1vh;
+}
+
+.leste-me span{
+    color: rgb(82, 82, 82);
+    font-family: 'Pixel';
+    font-stretch: ultra-expanded;
+        font-size: 1.5vh;
+}
+
+
+
+.middle-pt1{
+    background-color: rgba(0, 0, 0, 0.705);
+    padding: 1vh
+}
+
+.middle-pt2{
+    background-image: url(../osr/packages/IMG-9340.png);
+    background-repeat: repeat-x;
+    background-size: 35vh;
+
+}
+
+.bottom{
+    background-color: skyblue;
+}
+
+
+.btns{
+}
+
+.btnslist{
+
+    border: 10px solid transparent;
+    border-image: url(../osr/packages/whitelace.png) 17 round;
+    display: flex;
+    margin: 0vh auto;
+    width: 95%;
+    height: 50%;
+}
+
+.btnslist div {
+    display: inline-block;
+    margin: 0.1vh;
+    width: 100px;
+    height: 55px;
+}
+
+.btn02{
+    background-image: url(../osr/packages/gifs/e02.png);
+}
+
+.btn03{
+    background-image: url(../osr/packages/gifs/e03.webp);
+}
+
+.btn04{
+    background-image: url(../osr/packages/gifs/e04.gif);
+}
+
+.btn05{
+    background-image: url(../osr/packages/gifs/e05.png);
+}
+
+.btn06{
+    background-image: url(../osr/packages/gifs/e06.gif);
+}
+
+.btn07{
+    background-image: url(../osr/packages/gifs/e07.png);
+}
+
+.btn08{
+    background-image: url(../osr/packages/gifs/e08.gif);
+}
+
+.btn09{
+    background-image: url(../osr/packages/gifs/e09.gif);
+}
+
+.btn10{
+    background-image: url(../osr/packages/gifs/e10.gif);
+}
+
+.btn11{
+    background-image: url(../osr/packages/gifs/e11.gif);
+}
+
+.btn12{
+    background-image: url(../osr/packages/gifs/e012.png);
+}
+
+.btn14{
+    background-image: url(../osr/packages/gifs/tumblr_70d365ea84b9d813401e39a80a724c43_8ce66ebe_100.png);
+}
+
+.btn15{
+    background-image: url(../osr/packages/gifs/tumblr_f1140202ce16715ae0d60437068bb0cd_265ba85d_100.webp);
+}
+
+.btn16{
+    background-image: url(../osr/packages/gifs/tumblr_79b8f21b02e5a2988315da1d55e1f9e7_2be2e08f_100.png);
+}
+
+.btn17{
+    background-image: url(../osr/packages/gifs/vUAjED8.png);
+}
+
+.btn018{
+    background-image: url(../osr/packages/gifs/d8lukaa-91164af0-a453-4516-964c-c9ccafae68dc.gif);
+}
+
+.btn19{
+    background-image: url(../osr/packages/gifs/tumblr_844652d1cf8d2c0fab25d6dd0c199452_bbf10905_100.jpg);
+}
+
+.btn20{
+    background-image: url(../osr/packages/gifs/tumblr_1f05704d0bb02629e4f0c9d2956d3f07_de965c37_100.webp);
+}
+
+.btn21{
+    background-image: url(../osr/packages/gifs/2024-04-12-108-Kleki-1.png);
+}
+
+.btn22{
+    background-image: url(../osr/packages/gifs/vUAjED8.png);
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+
+    .global{
+        grid-template-rows: 32vh 10vh 5vh 32vh 50vh;
+    }
+
+    .top{
+    background-color: rgba(0, 0, 0, 0.705);
+
+    display: grid;
+    grid-template-columns: 60% 40%;
+    }
+
+
+    .sul-me{
+    grid-template-columns: 190px;
+    grid-template-rows: 25px 25px 25px 25px;
+
+    margin: 1vh;
+}
+
+.sul-me div{
+
+    display: grid;
+    width: 100%;
+    height: 100%;
+}
+
+
+    .norte-me{
+    justify-content:space-between;
+
+    display: grid;
+    margin: 0;
+    grid-template-columns: 14vh 11vh;
+    }
+
+    .left-me{
+    justify-self: center;
+    margin: 0vh;
+    width: 14vh;
+    height: 14vh;
+    }
+
+    .oeste-me{
+    display: grid;
+    grid-template-rows: 20vh 12vh ;
+    }
+
+    .icon-mebd{ 
+    border-width: 2vh;
+    margin: auto;
+    width: 10vh;
+    height: 10vh;
+    }
+
+    .icon-me{
+    width: 10vh;
+    height: 10vh;
+    }
+
+    .right-me{
+        background-color: transparent;
+        border: none;
+    }
+
+    .right-me p{
+        color: white;
+        font-size: 0.8vh;
+    }
+
+    .leste-me{
+        margin: 0px;
+        padding: 1vh;
+    }
+
+    .leste-me span{
+        font-size: 1vh;
+    }
+
+    .mdd-dd01{
+        display: none;
+    }
+
+
+
+
+
+}

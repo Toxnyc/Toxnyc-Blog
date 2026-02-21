@@ -1,123 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tstyle.css">
     <link rel="shortcut icon" type="imagex/png" href="osr/packages/icoo.ico">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://chattable.neocities.org/scripts/main.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>toxnyc's room</title>
+
+<style>
+.container {
+    width: 280px;
+    height: 250px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    
+    background-size: 75px;
+    background-image: url(osr/packages/miserabledollybg_argyle1.png);
+    opacity: 80%;
+
+    /*  */
+    transition: bottom 0.3s ease;
+}
+
+.bot, .bot1 {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+
+    outline: none;
+    color: #fff;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, .8), 0px 1px 0px rgba(255, 255, 255, .4);
+
+
+
+}
+
+
+
+.bot1 {
+    display: none;
+}
+
+.slbutton {
+    
+    cursor: pointer;
+    background-image: linear-gradient(to top, #b9b9b9 0%, #fff 80%, #FDFDFD 100%);
+    border-radius: 10px;
+    border: 3px solid #8F9092;
+    transition: all 0.2s ease;
+    font-family: 'OwreKynge';
+    font-family: 'OwreKynge';
+    font-size: 25px;
+    font-weight: 600;
+    color: #3a3a3a;
+    text-shadow: 0 3px #ffffff;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.wrapper {
+    display: grid 5vh 20vh 4vh 5vh;
+    width: 28vh;
+    height: 40vh;
+
+    color: #fff;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slider_containertop {
+    /*background-color: #9a1d86;*/
+    display: grid;
+    grid-template-columns: 8vh 18vh;
+
+
+    height: 5vh;
+    width: 30vh;
+}
+
+.slider_containertop input {
+    margin: auto 0;
+    width: 100%;
+    display: flex;
+    float: right;
+}
+
+.iconvolume {
+    display: flex;
+
+    margin: 1vh;
+    width: 3vh;
+    height: 3vh;
+    margin: auto;
+
+    background-image: url(osr/packages/audioicon.png);
+    background-size: cover;
+    image-rendering: pixelated;
+}
+
+.track-art {
+
+    width: 15vh;
+    height: 15vh;
+    border: 2px solid #FFFAFA;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.track-name {
+    /*background-color: blueviolet;*/
+    font-size: 1rem;
+}
+
+.plbuttons {
+    /*background-color: #e09627;*/
+    display: flex;
+    justify-content: space-around;
+
+    width: 28vh;
+    height: 5vh;
+
+}
+
+.plbuttons div {
+    background-color: transparent;
+    margin: auto;
+    width: 3vh;
+    height: 3vh;
+}
+
+.prev-track div {
+    background-image: url(osr/packages/previcon.png);
+    background-size: cover;
+    image-rendering: pixelated;
+    width: 100%;
+    height: 100%;
+}
+
+.pause {
+    background-image: url(osr/packages/pauseicon.png);
+    background-size: cover;
+    image-rendering: pixelated;
+
+    width: 100%;
+    height: 100%;
+}
+
+.play {
+    background-image: url(osr/packages/playicon.png);
+    background-size: cover;
+    image-rendering: pixelated;
+    width: 100%;
+    height: 100%;
+}
+
+.next-track div {
+    background-image: url(osr/packages/nexticon.png);
+    background-size: cover;
+    image-rendering: pixelated;
+    width: 100%;
+    height: 100%;
+}
+
+.slider_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seek_slider,
+.volume_slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: rgb(70, 70, 88);
+}
+
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(osr/packages/gifs/core.gif);
+    background-size: cover;
+    image-rendering: pixelated;
+    width: 20px;
+    height: 20px;
+
+    cursor: grab;
+
+}
+
+.seek_slider {
+    width: 60%;
+}
+
+.volume_slider {
+    width: 50%;
+}
+
+
+</style>
+
 </head>
 
 <body>
 
+    <div class="lente">
 
+        <div class="dd-02">
+            <div class="dd-04"></div>
+        </div>
 
-    <section class="glob">
-        <div class="cloud01 cl"></div>
-        <div class="cloud03 cl"></div>
-        <div class="cloud04 cl"></div>
-        <div class="cloud05 cl"></div>
-        <div class="cloud06 cl"></div>
-        <div class="cloud02 cl"></div>
+        <div class="walkingpath">
+            <div class="walking"></div>
+        </div>
 
+    </div>
 
-        <div class="bdimag">
-            <section class="all">
+<div class="container" id="container">
 
-                <section class="top"></section>
+    <div class="bot">
+        <button class="slbutton" id="btnPlus">♬</button>
+    </div>
 
-                <section class="middle">
-
-                    <section class="left">
-                        <div class="iconframe">
-                            <div class="icon"></div>
-                            <div class="rndic">
-                                <div class="tgf01 rn"></div>
-                                <div class="tgf02 rn"></div>
-                                <div class="tgf07 rn"></div>
-                                <div class="tgf08 rn"></div>
-                                <div class="tgf05 rn"></div>
-                                <div class="tgf06 rn"></div>
-                                <div class="tgf03 rn"></div>
-                                <div class="tgf10 rn"></div>
-                                <div class="tgf11 rn"></div>
-                                <div class="tgf09 rn"></div>
-                                <div class="tgf04 rn"></div>
-                            </div>
-                        </div>
-                        <div class="chatt">
-                            <div class="divbl01"></div>
-                            <iframe src='https://iframe.chat/embed?chat=69955965' id='chattable' frameborder='none'></iframe>
-                            <div class="divbl01"></div>
-                        </div>
-
-                        <div class="socialmedia">
-                            <button class="social-instagram" id="sociallink">
-                                <a></a>
-                            </button>
-                            <button class="social-steam" id="sociallink">
-                                <a></a>
-                            </button>
-                            <button class="social-github" id="sociallink">
-                                <a></a>
-                            </button>
-                            <button class="social-spotify" id="sociallink">
-                                <a></a>
-                            </button>
-                            <button class="social-neocities" id="sociallink">
-                                <a></a>
-                            </button>
-                        </div>
-
-
-                    </section>
-
-                    <section class="center">
-
-                        <div class="center-01">
-
-                            <button data-src="osr/homepages/aboutme.html">About Me</button>
-                            <button data-src="osr/homepages/blog.html">Blog</button>
-                            <button data-src="osr/homepages/gallery.html">Gallery</button>
-                            <button data-src="osr/homepages/photos.html">To Do</button>
-                            <button data-src="osr/homepages/links.html">Links</button>
-
-                        </div>
-
-                        <div class="center-02">
-                            <iframe class="home" name="frame" src="osr/homepages/aboutme.html" height="99%" width="99%"
-                            scrolling="yes">
-                        </iframe>
-                        </div>
-
-
-                    </section>
-
-                    <section class="right">
-
-                        <div class="blinklst" behavior="alternate" direction="up">
-                            <div class="bl07"></div>
-                            <div class="bl08"></div>
-                            <div class="bl09"></div>
-                            <div class="bl01"></div>
-                            <div class="bl02"></div>
-
-                            <div class="bl04"></div>
-                            <div class="bl05"></div>
-                            <div class="bl06"></div>
-
-                            <div class="bl10"></div>
-                            <div class="bl11"></div>
-                            <div class="bl12"></div>
-
-
-                            <div class="bl16"></div>
-                            <div class="bl18"></div>
-                        </div>
-
-
+    <div class="bot1">
+        <button class="slbutton" id="btnMinus">♬</button>
+    </div>
 
                         <div class="player">
                             <div class="wrapper">
@@ -141,7 +264,7 @@
                                 </div>
 
 
-                                <div class="buttons">
+                                <div class="plbuttons">
 
                                     <div class="prev-track" onclick="prevTrack()">
                                         <div></div>
@@ -158,54 +281,229 @@
                             </div>
                         </div>
 
-                        <div class="btns">
-                            <marquee class="btnslist" behavior="alternate">
-                                <div class="btn02"></div>
-                                <div class="btn03"></div>
-                                <div class="btn04"></div>
-                                <div class="btn05"></div>
-                                <div class="btn06"></div>
-
-                                <div class="btn07"></div>
-                                <div class="btn08"></div>
-                                <div class="btn09"></div>
-                                <div class="btn10"></div>
-                                <div class="btn11"></div>
-                                <div class="btn12"></div>
-
-
-                                <div class="btn13"></div>
-                                <div class="btn14"></div>
-                                <div class="btn15"></div>
-                                <div class="btn16"></div>
-                                <div class="btn17"></div>
-                            </marquee>
-                        </div>
-
-                        <!--<p>　n ∧＿∧
-                            (ﾖ （ ´∀｀ ） ｸﾞｯｼﾞｮﾌﾞ!
-                            Y　　　　つ</p>-->
-                    </section>
-
-                </section>
-
-            </section>
-        </div>
-
-    </section>
-    <script src="osr/script.js">
-
-        chattable.initialize({
-            stylesheet: "osr/chattable.css"
-        });
-
-    </script>
-
-<div class="lente">
-    <div class="walkingpath">
-        <div class="walking"></div>
-    </div>
 </div>
+
+        <div class="button-player"></div>
+    </div>
+
+    <section class="global">
+
+        <div class="border-corpo">
+        <section class="corpo">
+            <div class="banner">
+                <div class="visitor-count">
+                    <div class="psbd">
+                        <div class="ps">
+                        <span class="gnrtxt">.visitor counter.</span>
+                        <script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=40672123&main=1"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=40672123&main=1" /></noscript>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="dd-01"></div>
+                <button class="btnlin">Home</button>
+                <button class="btnlin">Blog</button>
+                <button class="btnlin">Gallery</button>
+                <button class="btnlin">Links</button>
+            </div>
+            <div class="painel">
+                <iframe class="home" name="frame" src="pages/am.html" height="99%" width="99%" scrolling="yes" margin="auto"></iframe>
+            </div>
+        </section>
+        </div>
+        
+    </section>
+    
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const container = document.getElementById("container");
+    const btnPlus = document.getElementById("btnPlus");
+    const btnMinus = document.getElementById("btnMinus");
+    const bot = document.querySelector(".bot");
+    const bot1 = document.querySelector(".bot1");
+
+    // Esconder
+    btnPlus.addEventListener("click", function () {
+        bot.style.display = "none";
+        bot1.style.display = "block";
+        container.style.bottom = "-211px"; // agora sai de verdade
+    });
+
+    // Mostrar
+    btnMinus.addEventListener("click", function () {
+        bot1.style.display = "none";
+        bot.style.display = "block";
+        container.style.bottom = "0";
+    });
+
+});
+
+// Seleção dos elementos do DOM
+let track_name = document.querySelector('.track-name');
+let playpause_btn = document.querySelector('.playpause-track');
+let next_btn = document.querySelector('.next-track');
+let prev_btn = document.querySelector('.prev-track');
+let seek_slider = document.querySelector('.seek_slider');
+let volume_slider = document.querySelector('.volume_slider');
+let curr_time = document.querySelector('.current-time');
+let total_duration = document.querySelector('.total-duration');
+
+// Variáveis principais
+let track_index = 0;
+let isPlaying = false;
+let updateTimer;
+let curr_track = new Audio(); // Inicializa o objeto de áudio
+
+// Lista de músicas
+const music_list = [
+    {
+        name: 'Too old to be cool - jaspertine',
+        music: 'osr/packages/music/jaspertine_-_Too_old_to_be_cool_8.mp3',
+        image: 'osr/packages/music/img/jaspertine.jpg'
+    },
+    {
+        name: 'still i - sleeperspaceborn',
+        music: 'osr/packages/music/sleeperspaceborn_-_still_i.mp3',
+        image: 'osr/packages/music/img/sleeperspaceborn.png'
+    },
+    {
+        name: 'Venom - echo_orbit',
+        music: 'osr/packages/music/echo_orbit_-_Venom.mp3',
+        image: 'osr/packages/music/img/echo_orbit.jpg'
+    },
+    {
+        name: 'redlightriot - sleeperspaceborn',
+        music: 'osr/packages/music/sleeperspaceborn_-_redlightriot_2.mp3',
+        image: 'osr/packages/music/img/sleeperspaceborn.png'
+    },
+    {
+        name: 'never grow old. - sleeperspaceborn',
+        music: 'osr/packages/music/sleeperspaceborn_-_never_grow_old._1.mp3',
+        image: 'osr/packages/music/img/sleeperspaceborn.png'
+    },
+    {
+        name: 'dark rose - sleeperspaceborn',
+        music: 'osr/packages/music/sleeperspaceborn_-_dark_rose.mp3',
+        image: 'osr/packages/music/img/sleeperspaceborn.png'
+    },
+    {
+        name: 'Sacred Light - Aussens@iter',
+        music: 'osr/packages/music/tobias_weber_-_Sacred_Light.mp3',
+        image: 'osr/packages/music/img/Aussens_iter.jpg'
+    },
+    {
+        name: 'Sound Effects Volume One - Apoxode',
+        music: 'osr/packages/music/Apoxode_-_Sound_Effects_Volume_One.mp3',
+        image: 'osr/packages/music/img/apoxode.jpg'
+    }
+];
+
+// Carrega a música inicial
+loadTrack(track_index);
+
+// Função para carregar uma música
+function loadTrack(track_index) {
+    clearInterval(updateTimer);
+    reset();
+
+    // Atualiza o objeto de áudio com a música atual
+    curr_track.src = music_list[track_index].music;
+    curr_track.load();
+
+    // Atualiza o nome da música
+    track_name.textContent = music_list[track_index].name;
+
+    // Atualiza a imagem do álbum
+    let track_art = document.querySelector('.track-art');
+    track_art.style.backgroundImage = `url('${music_list[track_index].image}')`;
+
+    // Configura o temporizador de atualização do tempo
+    updateTimer = setInterval(setUpdate, 1000);
+
+    // Avança automaticamente para a próxima música ao final da atual
+    curr_track.addEventListener('ended', nextTrack);
+}
+
+
+// Reseta os valores dos elementos de tempo e slider
+function reset() {
+    curr_time.textContent = "00:00";
+    total_duration.textContent = "00:00";
+    seek_slider.value = 0;
+}
+
+// Controla o botão de play/pause
+function playpauseTrack() {
+    isPlaying ? pauseTrack() : playTrack();
+}
+
+// Inicia a reprodução
+function playTrack() {
+    curr_track.play();
+    isPlaying = true;
+    playpause_btn.innerHTML = '<div class="pause"></div>';
+}
+
+// Pausa a reprodução
+function pauseTrack() {
+    curr_track.pause();
+    isPlaying = false;
+    playpause_btn.innerHTML = '<div class="play"></div>';
+}
+
+// Avança para a próxima música
+function nextTrack() {
+    track_index = (track_index + 1) % music_list.length;
+    loadTrack(track_index);
+    playTrack();
+}
+
+// Retorna à música anterior
+function prevTrack() {
+    track_index = (track_index - 1 + music_list.length) % music_list.length;
+    loadTrack(track_index);
+    playTrack();
+}
+
+// Atualiza a posição do slider de progresso e os tempos
+function setUpdate() {
+    let seekPosition = 0;
+    if (!isNaN(curr_track.duration)) {
+        seekPosition = curr_track.currentTime * (100 / curr_track.duration);
+        seek_slider.value = seekPosition;
+
+        let currentMinutes = Math.floor(curr_track.currentTime / 60);
+        let currentSeconds = Math.floor(curr_track.currentTime - currentMinutes * 60);
+        let durationMinutes = Math.floor(curr_track.duration / 60);
+        let durationSeconds = Math.floor(curr_track.duration - durationMinutes * 60);
+
+        if (currentSeconds < 10) { currentSeconds = "0" + currentSeconds; }
+        if (durationSeconds < 10) { durationSeconds = "0" + durationSeconds; }
+        if (currentMinutes < 10) { currentMinutes = "0" + currentMinutes; }
+        if (durationMinutes < 10) { durationMinutes = "0" + durationMinutes; }
+
+        curr_time.textContent = currentMinutes + ":" + currentSeconds;
+        total_duration.textContent = durationMinutes + ":" + durationSeconds;
+    }
+}
+
+// Ajusta o volume
+function setVolume() {
+    curr_track.volume = volume_slider.value / 100;
+}
+
+// Controla a posição da reprodução
+function seekTo() {
+    let seekTo = curr_track.duration * (seek_slider.value / 100);
+    curr_track.currentTime = seekTo;
+};
+
+</script>
+
 
 
 </body>
